@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">QApp</string>
+    <string name="tela_principal">Menu</string>
+    <string name="psc">PSC</string>
+    <string name="dod">DOD</string>
+
+    <string-array name="clientes">
+        <item>ITAÚ</item>
+        <item>SANTANDER</item>
+        <item>BRADESCO</item>
+        <item>BANCO DO BRASIL</item>
+        <item>NUBANK</item>
+        <item>C6</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="cod">
+        <item>1 - CHIP</item>
+        <item>9 - TARJA</item>
+        <item>10 - CARTÃO DANIFICADO</item>
+        <item>11 - JOB ERRADO</item>
+        <item>12 - FORNECEDOR</item>
+        <item>21 - OUTROS</item>
+        <item>22 - CARTÃO DANIFICADO</item>
+        <item>23 - FALHA DE PERSONALIZAÇÃO (FRENTE)</item>
+        <item>24 - FALHA DE PERSONALIZAÇÃO (VERSO)</item>
+    </string-array>
+
+    <string-array name="turno">
+        <item>DIURNO A</item>
+        <item>DIURNO B</item>
+        <item>NOTURNO A</item>
+        <item>NOTURNO B</item>
+    </string-array>
+
+    <string-array name="gaveta">
+        <item>GAVETA PACK ENTRADA</item>
+        <item>GAVETA PACK SAIDA</item>
+        <item>GAVETA #1</item>
+        <item>GAVETA #2</item>
+    </string-array>
+
+    <string-array name="dod">
+        <item>DOD #1</item>
+        <item>DOD #2</item>
+        <item>DOD #3</item>
+    </string-array>
+
+    <string-array name="linha">
+        <item>MANUSEIO 01</item>
+        <item>MANUSEIO 02</item>
+        <item>MANUSEIO 03</item>
+        <item>MANUSEIO 04</item>
+        <item>LINHA 01</item>
+        <item>LINHA 01</item>
+        <item>LINHA 02</item>
+        <item>LINHA 03</item>
+        <item>LINHA 04</item>
+        <item>PRODUÇÃO</item>
+        <item>EXPEDIÇÃO</item>
+        <item>ROTERIZAÇÃO</item>
+        <item>BH 01</item>
+        <item>BH 02</item>
+        <item>BH 03</item>
+        <item>MX 26</item>
+        <item>COFRE</item>
+        <item>DC 01</item>
+        <item>DC 02</item>
+        <item>DC 03</item>
+        <item>DC 05</item>
+        <item>DC 06</item>
+        <item>NA</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
