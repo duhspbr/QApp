@@ -9,13 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TelaCabecalho"></activity>
+        <activity android:name=".rejeitos_dod.DashBoardDOD" />
+        <activity
+            android:name=".rejeitos_dod.ActivityRejeitosDod"
+            android:parentActivityName=".rejeitos_dod.FormDOD" />
+        <activity android:name=".psc_bancario.ActivityPSCRecord" />
         <activity android:name=".TelaReceb" />
-        <activity android:name=".TelaAuditPsc" />
-        <activity android:name=".TelaReportarNok" />
-        <activity android:name=".FormDOD" />
+        <activity
+            android:name=".psc_bancario.ActivityPscResult"
+            android:parentActivityName=".psc_bancario.ActivityPSCRecord" />
+        <activity android:name=".rejeitos_dod.FormDOD" />
         <activity android:name=".TelaPrincipal" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".dashboard.ActivityDashBoard"
+            android:parentActivityName=".TelaPrincipal"/>
+        <activity android:name=".login.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

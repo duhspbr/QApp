@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background2"
+    tools:context=".TelaPrincipal">
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#AE000000"/>
+
+    <TextView
+        android:text="Selecione o formulario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:textStyle="bold"
+        android:textSize="14pt"
+        android:textColor="#FFFFFF"
+        android:gravity="top">
+    </TextView>
+
+    <Button
+        android:id="@+id/btnPSC"
+        android:layout_width="240dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="30dp"
+        android:drawableLeft="@drawable/creditcard"
+        android:elevation="10dp"
+        android:textStyle="bold"
+        android:text="PSC"
+        android:background="#656464"
+        android:textSize="8pt"
+        android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnAlmox"
+            android:layout_width="240dp"
+            android:layout_height="150dp"
+            android:layout_toRightOf="@id/btnPSC"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="100dp"
+            android:background="#656464"
+            android:drawableLeft="@drawable/warehouse"
+            android:elevation="10dp"
+            android:text="Almox"
+            android:textColor="#FFFFFF"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnCQM"
+            android:layout_width="240dp"
+            android:layout_height="150dp"
+            android:onClick="callTelaDash"
+            android:layout_below="@+id/btnPSC"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:drawableLeft="@drawable/factory"
+            android:elevation="10dp"
+            android:textStyle="bold"
+            android:text="CQM"
+            android:background="#656464"
+            android:textColor="#FFFFFF"
+            android:textSize="8pt" />
+
+        <Button
+            android:id="@+id/btnDOD"
+            android:layout_width="240dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/btnCQM"
+            android:drawableLeft="@drawable/conveyor"
+            android:layout_below="@id/btnAlmox"
+            android:elevation="10dp"
+            android:textStyle="bold"
+            android:text="DOD"
+            android:onClick="callTelaDod"
+            android:background="#656464"
+            android:textColor="#FFFFFF"
+            android:textSize="8pt" />
+
+    <Button
+        android:layout_width="296dp"
+        android:layout_height="98dp"
+        android:layout_below="@+id/btnCQM"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="180dp"
+        android:background="#ED8E4337"
+        android:drawableLeft="@drawable/ic_cancel_2"
+        android:text="Sair"
+        android:textColor="#FFFFFF"
+        android:textSize="14pt"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_height="50dp"
+        android:layout_width="350dp"
+        android:background="@drawable/thaleslogo">
+    </View>
+</RelativeLayout>

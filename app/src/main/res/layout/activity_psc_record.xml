@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBF9F9"
+    tools:context=".psc_bancario.ActivityPSCRecord">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collaptiongToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:expandedTitleMarginStart="15dp"
+            app:expandedTitleMarginBottom="20dp"
+            app:contentScrim="@android:color/secondary_text_light"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+
+            <RelativeLayout
+                android:background="@drawable/background4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="45dp"
+                    android:text="Turno"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"/>
+
+                <Spinner
+                    android:id="@+id/spinner_turno"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/textv1"
+                    android:layout_marginStart="30dp"
+                    android:backgroundTint="#FBFBFB"
+                    android:textSize="24sp"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/textv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="210dp"
+                    android:layout_marginTop="45dp"
+                    android:text="Linha"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"/>
+
+                <Spinner
+                    android:id="@+id/spinner_linha"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/textv1"
+                    android:layout_marginStart="210dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/textv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="400dp"
+                    android:layout_marginTop="45dp"
+                    android:text="Cliente"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"/>
+
+                <Spinner
+                    android:id="@+id/spinner_clientes"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/textv1"
+                    android:layout_marginStart="400dp"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"/>
+
+                <EditText
+                    android:id="@+id/editTextProdutoAudit"
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/spinner_turno"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="30sp"
+                    android:hint="Produto auditado"
+                    android:textSize="22sp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF" />
+
+                <EditText
+                    android:id="@+id/editTextID"
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/spinner_linha"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="210dp"
+                    android:hint="ID da ordem"
+                    android:textSize="22sp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF" />
+
+                <EditText
+                    android:id="@+id/editTextQtdeLote"
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/spinner_clientes"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="400dp"
+                    android:hint="Qntde do lote"
+                    android:inputType="number"
+                    android:textSize="22sp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"/>
+
+                <EditText
+                    android:id="@+id/editTextQtde"
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/editTextProdutoAudit"
+                    android:layout_marginStart="400dp"
+                    android:layout_marginTop="30dp"
+                    android:hint="Qntde da amostra"
+                    android:inputType="number"
+                    android:textSize="22sp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:id="@+id/toolBar"
+                app:title="Auditoria PSC"
+                app:contentInsetStart="8dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnOK"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="520dp"
+        android:layout_marginTop="480dp"
+        android:backgroundTint="#039BE5"
+        android:src="@drawable/ic_save">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/psc_rcv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        tools:listitem="@layout/card_psc"
+        android:background="@drawable/background4"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -3,51 +3,50 @@ package com.qualidade.qapp;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
+
+import com.qualidade.qapp.dashboard.ActivityDashBoard;
+import com.qualidade.qapp.login.LoginClass;
+import com.qualidade.qapp.psc_bancario.ActivityPscResult;
+import com.qualidade.qapp.rejeitos_dod.ActivityRejeitosDod;
 
 public class TelaPrincipal extends AppCompatActivity {
 
-    Processar processar;
     LoginClass loginClass;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_principal);
+        setContentView(R.layout.activity_mainscreen);
         setTitle("Menu Principal");
 
-        processar = new Processar();
-        TextView textVData = (TextView) findViewById(R.id.textVData);
-        textVData.setText(processar.getData().toString());
+        Button btnPSC = findViewById(R.id.btnPSC);
 
-        loginClass = new LoginClass();
-        TextView textVUser = (TextView) findViewById(R.id.textVUser);
-        textVUser.setText(loginClass.getUsuario());
+        btnPSC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callTelaCabecalho();
+            }
+        });
     }
 
-    public void chamartelaDod(View view) {
-        Intent intent = new Intent(this, FormDOD.class);
+    public void callTelaDod(View view) {
+        Intent intent = new Intent(this, ActivityRejeitosDod.class);
         startActivity(intent);
     }
 
-    public void chamartelaReportarNok(View view) {
-        Intent intent = new Intent(this, TelaReportarNok.class);
+    public void callTelaCabecalho() {
+        Intent intent = new Intent(this, ActivityPscResult.class);
         startActivity(intent);
     }
 
-    public void chamartelaCabecalho(View view) {
-        Intent intent = new Intent(this, TelaCabecalho.class);
-        startActivity(intent);
-    }
-
-    public void chamartelatelaReceb(View view) {
-        Intent intent = new Intent(this, TelaReceb.class);
+    public void callTelaDash(View view) {
+        Intent intent = new Intent(this, ActivityDashBoard.class);
         startActivity(intent);
     }
 }

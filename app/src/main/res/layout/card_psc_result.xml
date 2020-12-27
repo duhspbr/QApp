@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="5dp"
+    android:elevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relative_view_not_expand2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cliente"
+                android:textStyle="bold|italic"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"/>
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/textv4"
+                android:background="#B1B1B1"
+                android:layout_marginStart="20dp">
+            </View>
+
+            <TextView
+                android:id="@+id/text_view_cliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Banco C6"
+                android:textSize="24sp"
+                android:textStyle="italic|bold"
+                android:layout_below="@+id/textv4"
+                android:layout_marginStart="20dp"/>
+
+
+            <TextView
+                android:id="@+id/textv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID"
+                android:textStyle="bold|italic"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="180dp"/>
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/textv5"
+                android:background="#B1B1B1"
+                android:layout_marginStart="180dp">
+            </View>
+
+            <TextView
+                android:id="@+id/text_view_id_ordem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textv5"
+                android:layout_marginStart="180dp"
+                android:layout_marginBottom="15dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="OT3434F"
+                android:textSize="24sp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/text_view_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="0dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="23/12/2020"
+                android:textSize="16sp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/text_view_hora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_view_data"
+                android:layout_marginStart="355dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="15:50"
+                android:textSize="16sp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/textv10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textStyle="bold|italic"
+                android:textSize="18sp"
+                android:layout_marginStart="490dp"
+                android:layout_marginTop="20dp">
+            </TextView>
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/textv10"
+                android:background="#B1B1B1"
+                android:layout_marginStart="490dp">
+            </View>
+
+            <TextView
+                android:id="@+id/text_view_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textv10"
+                android:layout_marginStart="490dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#E53935"
+                android:text="NOK"
+                android:textSize="24sp"
+                android:textStyle="italic|bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_expand_2"
+            android:layout_below="@+id/relative_view_not_expand2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+            </View>
+
+            <TextView
+                android:id="@+id/textv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Produto"
+                android:textStyle="bold|italic"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"/>
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:background="#B1B1B1"
+                android:layout_below="@+id/textv3"
+                android:layout_marginStart="20dp">
+            </View>
+
+            <TextView
+                android:id="@+id/text_view_produto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/textv3"
+                android:layout_marginStart="20dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="linha elite"
+                android:textSize="24sp"
+                android:textStyle="italic|bold" />
+
+            <View
+                android:layout_width="140dp"
+                android:layout_height="1dp"
+                android:background="#B1B1B1"
+                android:layout_below="@+id/textv8"
+                android:layout_marginStart="360dp">
+            </View>
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:background="#B1B1B1"
+                android:layout_below="@+id/textv3"
+                android:layout_marginStart="20dp">
+            </View>
+
+            <TextView
+                android:id="@+id/textv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="460dp"
+                android:layout_marginTop="15dp"
+                android:text="Qntde amostra"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/text_view_quantidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textv"
+                android:layout_marginStart="460dp"
+                android:text="450"
+                android:textSize="24sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/textv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="360dp"
+                android:layout_marginTop="15dp"
+                android:text="Qntde lote"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/text_view_quantidade_l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textv8"
+                android:layout_marginStart="360dp"
+                android:text="450"
+                android:textSize="24sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/textv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Turno"
+                android:textStyle="bold|italic"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="180dp"/>
+
+            <TextView
+                android:id="@+id/text_view_turno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:text="diurno a"
+                android:textSize="24sp"
+                android:textStyle="italic|bold"
+                android:layout_below="@+id/textv2"
+                android:layout_marginStart="180dp"/>
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:background="#B1B1B1"
+                android:layout_below="@+id/textv2"
+                android:layout_marginStart="180dp">
+            </View>
+
+            <TextView
+                android:id="@+id/textv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_view_produto"
+                android:text="Item"
+                android:textStyle="bold|italic"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"/>
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:background="#B1B1B1"
+                android:layout_below="@+id/textv1"
+                android:layout_marginStart="20dp">
+            </View>
+
+            <TextView
+                android:id="@+id/text_view_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Item 1. 4 conf"
+                android:textSize="24sp"
+                android:textStyle="italic|bold"
+                android:layout_below="@+id/textv1"
+                android:layout_marginStart="20dp"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
