@@ -44,16 +44,7 @@ public abstract class NoteDODDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            noteDODDao.insert(new NoteDOD("Santander", "DOD#2", "NOTURNO", "GAV 1", "15 - PERSO", "12", "22-02-2020", "15:25"));
-            noteDODDao.insert(new NoteDOD("Itaú", "DOD#3", "DIURNO", "PACK 2", "12", "130", "21-02-2020", "04:20"));
-            noteDODDao.insert(new NoteDOD("Itaú", "DOD#3", "NOTURNO", "PACK 1", "15", "102", "18-02-2020", "08:00"));
-            noteDODDao.insert(new NoteDOD("NUBANK", "DOD#3", "NOTURNO", "PACK 1", "15", "102", "19-02-2020", "08:00"));
-            noteDODDao.insert(new NoteDOD("C6", "DOD#3", "DIURNO", "PACK 1", "15", "102", "03-02-2020", "08:00"));
-            noteDODDao.insert(new NoteDOD("Bradesco", "DOD#3", "NOTURNO", "GAV 1", "15", "102", "14-02-2020", "08:00"));
-            noteDODDao.insert(new NoteDOD("CAJU", "DOD#3", "NOTURNO", "PACK 1", "15", "102", "28-09-2020", "08:00"));
-            noteDODDao.insert(new NoteDOD("NEON", "DOD#3", "NOTURNO", "GAV 1", "15", "102", "02-08-2020", "08:00"));
-            noteDODDao.insert(new NoteDOD("BB", "DOD#3", "DIURNO", "PACK 1", "15", "102", "03-01-2020", "08:00"));
-
+            noteDODDao.insert(new NoteDOD("Santander", "DOD#2", "NOTURNO", "GAV 1", "15 - PERSO", 120, "22-02-2020", "15:25"));
             return null;
         }
     }

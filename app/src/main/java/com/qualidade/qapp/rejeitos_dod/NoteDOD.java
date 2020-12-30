@@ -1,7 +1,5 @@
 package com.qualidade.qapp.rejeitos_dod;
 
-import android.os.Build;
-
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -15,11 +13,11 @@ public class NoteDOD {
     private final String turno;
     private final String gaveta;
     private final String cod_error;
-    private final String quant;
+    private final int quant;
     private final String date;
     private final String hora;
 
-    public NoteDOD(String cliente, String str_dod, String turno, String gaveta, String cod_error, String quant, String date, String hora) {
+    public NoteDOD(String cliente, String str_dod, String turno, String gaveta, String cod_error, int quant, String date, String hora) {
         this.cliente = cliente;
         this.str_dod = str_dod;
         this.turno = turno;
@@ -58,7 +56,7 @@ public class NoteDOD {
         return cod_error;
     }
 
-    public String getQuant() {
+    public int getQuant() {
         return quant;
     }
 

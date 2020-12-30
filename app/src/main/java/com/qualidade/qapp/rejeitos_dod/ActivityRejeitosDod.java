@@ -64,7 +64,7 @@ public class ActivityRejeitosDod extends AppCompatActivity {
         if (requestCode == ADD_NOTE_REQUEST && resultCode == RESULT_OK) {
             String maquina = data.getStringExtra(FormDOD.EXTRA_MAQUINA);
             String cliente = data.getStringExtra(FormDOD.EXTRA_CLIENTE);
-            String quantidade = data.getStringExtra(FormDOD.EXTRA_QUANTIDADE);
+            int quantidade = Integer.parseInt(data.getStringExtra(FormDOD.EXTRA_QUANTIDADE));
             String codError = data.getStringExtra(FormDOD.EXTRA_CODEERROR);
             String turno = data.getStringExtra(FormDOD.EXTRA_TURNO);
             String gaveta = data.getStringExtra(FormDOD.EXTRA_GAVETA);

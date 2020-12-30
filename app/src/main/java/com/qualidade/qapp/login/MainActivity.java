@@ -9,8 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.qualidade.qapp.R;
-import com.qualidade.qapp.TelaPrincipal;
-import com.qualidade.qapp.login.LoginClass;
+import com.qualidade.qapp.telainicial.TelaPrincipal;
 
 public class MainActivity extends AppCompatActivity {
 

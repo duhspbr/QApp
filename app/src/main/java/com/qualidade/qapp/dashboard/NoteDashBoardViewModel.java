@@ -10,17 +10,23 @@ import java.util.List;
 
 public class NoteDashBoardViewModel extends AndroidViewModel {
     private NoteDashBoardRepository repository;
-    private LiveData<Integer> allNotesDashBoard;
-    private LiveData<Integer> allNotesDashBoard_psc_status_today;
 
     public NoteDashBoardViewModel(@NonNull Application application) {
         super(application);
         repository = new NoteDashBoardRepository(application);
-        allNotesDashBoard = repository.getCount();
-        allNotesDashBoard_psc_status_today = repository.getCount_psc_status_totay();
     }
 
     public LiveData<Integer> getCount() { return repository.getCount(); }
 
-    public LiveData<Integer> getCount_psc_status_totay() { return repository.getCount_psc_status_totay(); }
+    public LiveData<Integer> getCount_psc_status_hoje() { return repository.getCount_psc_status_hoje(); }
+
+    public LiveData<Integer> getCount_psc_status_total_dia_nok() { return repository.getCount_psc_status_total_dia_nok(); }
+
+    public LiveData<Integer> getCount_dod_gav1() { return repository.getCount_dod_gav1(); }
+
+    public LiveData<Integer> getCount_dod_gav2() { return repository.getCount_dod_gav2(); }
+
+    public LiveData<Integer> getCount_dod_entrada() { return repository.getCount_dod_entrada(); }
+
+    public LiveData<Integer> getCount_dod_saida() { return repository.getCount_dod_saida(); }
 }

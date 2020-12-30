@@ -19,9 +19,9 @@
             android:name=".psc_bancario.ActivityPscResult"
             android:parentActivityName=".psc_bancario.ActivityPSCRecord" />
         <activity android:name=".rejeitos_dod.FormDOD" />
-        <activity android:name=".TelaPrincipal" />
+        <activity android:name=".telainicial.TelaPrincipal" />
         <activity android:name=".dashboard.ActivityDashBoard"
-            android:parentActivityName=".TelaPrincipal"/>
+            android:parentActivityName=".telainicial.TelaPrincipal"/>
         <activity android:name=".login.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

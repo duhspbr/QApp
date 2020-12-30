@@ -1,4 +1,4 @@
-package com.qualidade.qapp;
+package com.qualidade.qapp.telainicial;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.qualidade.qapp.R;
 import com.qualidade.qapp.dashboard.ActivityDashBoard;
 import com.qualidade.qapp.login.LoginClass;
 import com.qualidade.qapp.psc_bancario.ActivityPscResult;

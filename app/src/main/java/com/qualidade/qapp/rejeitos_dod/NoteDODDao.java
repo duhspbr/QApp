@@ -32,4 +32,16 @@ public interface NoteDODDao {
 
     @Query("SELECT COUNT(*) FROM notedod_table")
     LiveData<Integer> getCount();
+
+    @Query("SELECT COUNT(*) FROM notedod_table WHERE date=:date AND gaveta='GAV 1'")
+    LiveData<Integer> getCount_dod_gav1(String date);
+
+    @Query("SELECT COUNT(*) FROM notedod_table WHERE date=:date AND gaveta='GAV 2'")
+    LiveData<Integer> getCount_dod_gav2(String date);
+
+    @Query("SELECT COUNT(*) FROM notedod_table WHERE date=:date AND gaveta='PACK ENTRADA'")
+    LiveData<Integer> getCount_dod_entrada(String date);
+
+    @Query("SELECT COUNT(*) FROM notedod_table WHERE date=:date AND gaveta='PACK SAIDA'")
+    LiveData<Integer> getCount_dod_saida(String date);
 }
