@@ -16,9 +16,6 @@ import com.qualidade.qapp.rejeitos_dod.ActivityRejeitosDod;
 
 public class TelaPrincipal extends AppCompatActivity {
 
-    LoginClass loginClass;
-
-    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

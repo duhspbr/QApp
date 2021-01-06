@@ -31,8 +31,8 @@ public class Login_ListaUsers extends AppCompatActivity {
         buttonAddUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(ActivityRejeitosDod.this, FormDOD.class);
-                startActivityForResult(intent, ADD_NOTE_REQUEST);*/
+                Intent intent = new Intent(Login_ListaUsers.this, LoginRecord.class);
+                startActivityForResult(intent, ADD_NOTE_REQUEST);
             }
         });
 

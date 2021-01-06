@@ -13,7 +13,6 @@ import com.qualidade.qapp.telainicial.TelaPrincipal;
 
 public class MainActivity extends AppCompatActivity {
 
-    LoginClass loginClass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,17 +20,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        loginClass = new LoginClass();
+
         Intent intent = new Intent(this, TelaPrincipal.class);
 
         EditText editTextNome = findViewById(R.id.editNome);
         EditText editTextSenha = findViewById(R.id.editPass);
 
-        loginClass.setUsuario(editTextNome.getText().toString());
-        loginClass.setSenha(editTextSenha.getText().toString());
-
-        if (loginClass.checkLogin()) {
-            Toast.makeText(getApplicationContext(), "Bem vindo, " + loginClass.getUsuario().toString(), Toast.LENGTH_LONG).show();
+        if (editTextNome.getText().equals("adm") && editTextSenha.getText().equals("123")) {
+            Toast.makeText(getApplicationContext(), "Bem vindo, ", Toast.LENGTH_LONG).show();
             startActivity(intent);
         }
         else {
