@@ -3,14 +3,12 @@ package com.qualidade.qapp.login;
 import android.app.Application;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
-
-import com.qualidade.qapp.rejeitos_dod.NoteDOD;
-import com.qualidade.qapp.rejeitos_dod.NoteDODRepository;
 
 import java.util.List;
 
-public class LoginViewModel {
+public class LoginViewModel extends AndroidViewModel {
 
     private LoginRepository repository;
     private LiveData<List<Login>> allUsers;

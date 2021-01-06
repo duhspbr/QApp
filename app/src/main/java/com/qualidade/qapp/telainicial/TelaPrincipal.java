@@ -11,7 +11,6 @@ import android.widget.Button;
 
 import com.qualidade.qapp.R;
 import com.qualidade.qapp.dashboard.ActivityDashBoard;
-import com.qualidade.qapp.login.LoginClass;
 import com.qualidade.qapp.psc_bancario.ActivityPscResult;
 import com.qualidade.qapp.rejeitos_dod.ActivityRejeitosDod;
 
