@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".login.Login_Record"></activity>
+        <activity android:name=".login.Login_ListaUsers" />
         <activity android:name=".rejeitos_dod.DashBoardDOD" />
         <activity
             android:name=".rejeitos_dod.ActivityRejeitosDod"
@@ -20,8 +22,9 @@
             android:parentActivityName=".psc_bancario.ActivityPSCRecord" />
         <activity android:name=".rejeitos_dod.FormDOD" />
         <activity android:name=".telainicial.TelaPrincipal" />
-        <activity android:name=".dashboard.ActivityDashBoard"
-            android:parentActivityName=".telainicial.TelaPrincipal"/>
+        <activity
+            android:name=".dashboard.ActivityDashBoard"
+            android:parentActivityName=".telainicial.TelaPrincipal" />
         <activity android:name=".login.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

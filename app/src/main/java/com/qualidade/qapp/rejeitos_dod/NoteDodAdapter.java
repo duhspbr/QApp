@@ -93,7 +93,7 @@ public class NoteDodAdapter extends RecyclerView.Adapter<NoteDodAdapter.MViewHol
     @Override
     public void onBindViewHolder(@NonNull MViewHolder holder, int position) {
         NoteDOD currentNote = noteDODS.get(position);
-        holder.textViewQuantidade.setText(currentNote.getQuant());
+        holder.textViewQuantidade.setText(Integer.toString(currentNote.getQuant()));
         holder.textViewMaquina.setText(currentNote.getStr_dod());
         holder.textViewGaveta.setText(currentNote.getGaveta());
         holder.textViewCliente.setText(currentNote.getCliente());
