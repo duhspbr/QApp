@@ -12,22 +12,22 @@ import java.util.List;
 
 public class LoginViewModel {
 
-    private NoteDODRepository repository;
-    private LiveData<List<NoteDOD>> allNotesDod;
+    private LoginRepository repository;
+    private LiveData<List<Login>> allUsers;
 
-    public NoteDODViewModel(@NonNull Application application) {
+    public LoginViewModel(@NonNull Application application) {
         super(application);
-        repository = new NoteDODRepository(application);
-        allNotesDod = repository.getAllNotesDod();
+        repository = new LoginRepository(application);
+        allUsers = repository.getAllUsers();
     }
 
-    public void insert(NoteDOD noteDOD) { repository.insert(noteDOD); }
+    public void insert(Login login) { repository.insert(login); }
 
-    public void update(NoteDOD noteDOD) { repository.update(noteDOD); }
+    public void update(Login login) { repository.update(login); }
 
-    public void delete(NoteDOD noteDOD) { repository.delete(noteDOD); }
+    public void delete(Login login) { repository.delete(login); }
 
-    public void deleteAllNotesDOD(NoteDOD noteDOD) { repository.deleteAllNotesDod(); }
+    public void deleteAllUsers(Login login) { repository.deleteAllUsers(); }
 
-    public LiveData<List<NoteDOD>> getAllNotesDod() { return allNotesDod; }
+    public LiveData<List<Login>> getAllUsers() { return allUsers; }
 }
