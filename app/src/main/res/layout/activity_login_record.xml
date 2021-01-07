@@ -65,6 +65,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_below="@+id/editUser"
                 android:singleLine="true"
+                android:inputType="textPassword"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@+id/lblUser"/>
 
@@ -86,6 +87,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_below="@+id/editSenha"
                 android:singleLine="true"
+                android:inputType="textPassword"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@+id/lblConfirmar"/>
 

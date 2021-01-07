@@ -25,6 +25,8 @@ public class LoginRepository {
 
     public void deleteAllUsers() { new LoginRepository.DeleteAllUsersAsyncTask(loginDao).execute(); }
 
+    public LiveData<Integer> getUser(String user, String senha) { return loginDao.getUser(user, senha); }
+
     public LiveData<List<Login>> getAllUsers() { return allUsers; }
 
     private static class InsertUserAsyncTask extends AsyncTask<Login, Void, Void> {

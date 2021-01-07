@@ -26,4 +26,6 @@ public interface LoginDao {
     @Query("SELECT * FROM login_table")
     LiveData<List<Login>> getAllUsers();
 
+    @Query("SELECT COUNT(*)  FROM login_table WHERE usuario=:user AND senha=:senha")
+    LiveData<Integer> getUser(String user, String senha);
 }

@@ -19,13 +19,15 @@ public class LoginViewModel extends AndroidViewModel {
         allUsers = repository.getAllUsers();
     }
 
-    public void insert(Login login) { repository.insert(login); }
+    public void insert(Login user) { repository.insert(user); }
 
-    public void update(Login login) { repository.update(login); }
+    public void update(Login user) { repository.update(user); }
 
-    public void delete(Login login) { repository.delete(login); }
+    public void delete(Login user) { repository.delete(user); }
 
     public void deleteAllUsers(Login login) { repository.deleteAllUsers(); }
 
     public LiveData<List<Login>> getAllUsers() { return allUsers; }
+
+    public LiveData<Integer> getUser(String user, String senha) { return repository.getUser(user, senha); }
 }
