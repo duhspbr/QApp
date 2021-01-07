@@ -33,7 +33,7 @@
     </androidx.recyclerview.widget.RecyclerView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_new"
+        android:id="@+id/float_new_user"
         android:backgroundTint="#3555E5"
         android:layout_width="120dp"
         android:layout_height="120dp"

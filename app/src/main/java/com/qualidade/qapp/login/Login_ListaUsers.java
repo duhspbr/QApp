@@ -27,7 +27,7 @@ public class Login_ListaUsers extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_new_user);
 
-        FloatingActionButton buttonAddUser = findViewById(R.id.btn_new);
+        FloatingActionButton buttonAddUser = findViewById(R.id.float_new_user);
         buttonAddUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -9,6 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -43,10 +44,8 @@ public class LoginRecord extends AppCompatActivity {
         editSenha = findViewById(R.id.editSenha);
         editConfirmSenha = findViewById(R.id.editConfirmar);
 
-        FloatingActionButton floatingActionButtonOK = findViewById(R.id.btnOK);
-
-        floatingActionButtonOK.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.N)
+        Button buttonOK = findViewById(R.id.btnSalvar);
+        buttonOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 saveUser();
