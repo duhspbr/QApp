@@ -11,7 +11,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.qualidade.qapp.dashboard.NoteDashBoardDao;
 
-@Database(entities = { Login.class }, version = 1)
+@Database(entities = { Login.class }, version = 2)
 public abstract class LoginDatabase extends RoomDatabase {
 
     private static LoginDatabase instance;

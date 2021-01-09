@@ -19,8 +19,12 @@ import com.qualidade.qapp.telainicial.TelaPrincipal;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String EXTRA_USER =
+            "com.qualidade.qapp.login.EXTRA_USER";
+
     Intent intent;
     LoginViewModel mViewModel;
+    private String auditor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                                 if (integer == 1) {
                                     Toast.makeText(MainActivity.this, "Bem vindo!", Toast.LENGTH_LONG).show();
                                     intent = new Intent(MainActivity.this, TelaPrincipal.class);
+                                    auditor = editUser.getText().toString();
+                                    intent.putExtra(EXTRA_USER, auditor);
                                     startActivity(intent);
                                 }
                                 else {

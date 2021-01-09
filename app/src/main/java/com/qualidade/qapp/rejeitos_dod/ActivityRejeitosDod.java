@@ -14,18 +14,25 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.qualidade.qapp.R;
+import com.qualidade.qapp.login.MainActivity;
+import com.qualidade.qapp.telainicial.TelaPrincipal;
 
 import java.util.List;
 
 public class ActivityRejeitosDod extends AppCompatActivity {
+
     public static final int ADD_NOTE_REQUEST = 1;
 
     private NoteDODViewModel noteDODViewModel;
+    private String auditor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dod_result);
+
+        Intent intent = getIntent();
+        auditor = intent.getStringExtra(TelaPrincipal.EXTRA_USER);
 
         FloatingActionButton buttonAddNote = findViewById(R.id.btn_new);
         buttonAddNote.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +78,7 @@ public class ActivityRejeitosDod extends AppCompatActivity {
             String data_n = data.getStringExtra(FormDOD.EXTRA_DATA);
             String hora = data.getStringExtra(FormDOD.EXTRA_HORA);
 
-            NoteDOD noteDOD = new NoteDOD(cliente, maquina, turno, gaveta, codError, quantidade, data_n, hora);
+            NoteDOD noteDOD = new NoteDOD(auditor, cliente, maquina, turno, gaveta, codError, quantidade, data_n, hora);
             noteDODViewModel.insert(noteDOD);
 
             Toast.makeText(this, "Note saved", Toast.LENGTH_LONG).show();

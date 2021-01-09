@@ -12,6 +12,8 @@
         <activity android:name=".login.LoginRecord" />
         <activity android:name=".login.Login_ListaUsers" />
         <activity android:name=".rejeitos_dod.DashBoardDOD" />
+        <activity android:name=".telainicial.TelaPrincipal"
+            android:parentActivityName=".login.MainActivity" />
         <activity
             android:name=".rejeitos_dod.ActivityRejeitosDod"
             android:parentActivityName=".rejeitos_dod.FormDOD" />
@@ -21,7 +23,6 @@
             android:name=".psc_bancario.ActivityPscResult"
             android:parentActivityName=".psc_bancario.ActivityPSCRecord" />
         <activity android:name=".rejeitos_dod.FormDOD" />
-        <activity android:name=".telainicial.TelaPrincipal" />
         <activity
             android:name=".dashboard.ActivityDashBoard"
             android:parentActivityName=".telainicial.TelaPrincipal" />

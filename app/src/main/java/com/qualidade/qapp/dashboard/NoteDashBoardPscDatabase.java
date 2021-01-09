@@ -36,30 +36,3 @@ public abstract class NoteDashBoardPscDatabase extends RoomDatabase {
         }
     };
 }
-
-
-//@Database(entities = {NoteDOD.class}, version = 1)
-//public abstract class NoteDashBoardDodDatabase extends RoomDatabase {
-//
-//    private static NoteDashBoardDodDatabase instance;
-//
-//    public abstract NoteDODDao noteDaoDOD();
-//
-//    public static synchronized NoteDashBoardDodDatabase getInstance(Context context) {
-//        if (instance == null) {
-//            instance = Room.databaseBuilder(context.getApplicationContext(),
-//                    NoteDashBoardDodDatabase.class, "note_dod_database")
-//                    .fallbackToDestructiveMigration()
-//                    .addCallback(roomCallback)
-//                    .build();
-//        }
-//        return instance;
-//    }
-//
-//    private static final Callback roomCallback = new Callback() {
-//        @Override
-//        public void onCreate(@NonNull SupportSQLiteDatabase db) {
-//            super.onCreate(db);
-//        }
-//    };
-//}

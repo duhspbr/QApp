@@ -16,8 +16,10 @@ public class NoteDOD {
     private final int quant;
     private final String date;
     private final String hora;
+    private final String auditor;
 
-    public NoteDOD(String cliente, String str_dod, String turno, String gaveta, String cod_error, int quant, String date, String hora) {
+    public NoteDOD(String auditor, String cliente, String str_dod, String turno, String gaveta, String cod_error, int quant, String date, String hora) {
+        this.auditor = auditor;
         this.cliente = cliente;
         this.str_dod = str_dod;
         this.turno = turno;
@@ -64,4 +66,5 @@ public class NoteDOD {
 
     public String getDate() { return date; }
 
+    public String getAuditor() { return auditor; }
 }

@@ -17,6 +17,8 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.qualidade.qapp.R;
+import com.qualidade.qapp.login.MainActivity;
+import com.qualidade.qapp.telainicial.TelaPrincipal;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -30,6 +32,8 @@ public class ActivityPscResult extends AppCompatActivity {
     private ArrayList<ItemCard> itemCard;
     private Calendar calendar;
     private SimpleDateFormat dateFormat;
+    private String auditor;
+    Intent intent;
 
     private NotePSCViewModel notePSCViewModel;
 
@@ -37,6 +41,9 @@ public class ActivityPscResult extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_psc_result);
+
+        intent = getIntent();
+        auditor = intent.getStringExtra(TelaPrincipal.EXTRA_USER);
 
         FloatingActionButton buttonAddNote = findViewById(R.id.btn_new);
         buttonAddNote.setOnClickListener(new View.OnClickListener() {
@@ -79,8 +86,10 @@ public class ActivityPscResult extends AppCompatActivity {
 
         dateFormat = new SimpleDateFormat("HH:mm");
         String _hora = dateFormat.format(calendar.getTime());
+        
 
         if (requestCode == ADD_NOTE_REQUEST && resultCode == RESULT_OK) {
+
             String linha = data.getStringExtra(ActivityPSCRecord.EXTRA_LINHA);
             String cliente = data.getStringExtra(ActivityPSCRecord.EXTRA_CLIENTE);
             String quantidade_a = data.getStringExtra(ActivityPSCRecord.EXTRA_QUANTIDADE_A);
@@ -92,7 +101,7 @@ public class ActivityPscResult extends AppCompatActivity {
 
             for (ListaItens keys: item.values()) {
 
-                NotePSC notePSC = new NotePSC(turno, linha, cliente, produto, id_ordem, quantidade_l,
+                NotePSC notePSC = new NotePSC(auditor, turno, linha, cliente, produto, id_ordem, quantidade_l,
                         quantidade_a, checkItem(Integer.parseInt(keys.getItem())), keys.getStatus(), _data.replace("-", "/"), _hora);
                 notePSCViewModel.insert(notePSC);
             }

@@ -19,9 +19,11 @@ public class NotePSC {
     private final String status;
     private final String hora;
     private final String date;
+    private final String auditor;
 
 
-    public NotePSC(String turno, String linha, String cliente, String prod_audit, String id_ordem, String qtde_lote, String qtde_amostra, String item, String status, String date, String hora) {
+    public NotePSC(String auditor, String turno, String linha, String cliente, String prod_audit, String id_ordem, String qtde_lote, String qtde_amostra, String item, String status, String date, String hora) {
+        this.auditor = auditor;
         this.cliente = cliente;
         this.id_ordem = id_ordem;
         this.turno = turno;
@@ -76,4 +78,6 @@ public class NotePSC {
     public String getDate() { return date; }
 
     public String getHora() { return hora; }
+
+    public String getAuditor() { return auditor; }
 }

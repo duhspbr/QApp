@@ -9,7 +9,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-@Database(entities = {NotePSC.class}, version = 1)
+@Database(entities = {NotePSC.class}, version = 2)
 public abstract class NotePSCDatabase extends RoomDatabase {
 
     private static NotePSCDatabase instance;
@@ -42,10 +42,10 @@ public abstract class NotePSCDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Void... voids) {
-            notePSCDao.insert(new NotePSC("diurno a", "manuseio", "santander", "conta mais", "FF34F", "212", "233", "12", "OK", "22/11/2002", "15:00"));
-            notePSCDao.insert(new NotePSC("diurno b", "manuseio", "itaú", "conta select", "FF34F", "450", "21", "1", "NOK", "15/10/2020", "12:00"));
-            notePSCDao.insert(new NotePSC("noturno a", "manuseio", "safra", "elite", "FF34F", "212", "122", "1", "OK", "15/10/2020", "12:00"));
-            notePSCDao.insert(new NotePSC("noturno f", "manuseio", "safra", "elite", "FF34F", "22", "122", "1", "NOK", "15/10/2020", "12:00"));
+            notePSCDao.insert(new NotePSC("Fernanda", "diurno a", "manuseio", "santander", "conta mais", "FF34F", "212", "233", "12", "OK", "22/11/2002", "15:00"));
+            notePSCDao.insert(new NotePSC("Freeman", "diurno b", "manuseio", "itaú", "conta select", "FF34F", "450", "21", "1", "NOK", "15/10/2020", "12:00"));
+            notePSCDao.insert(new NotePSC("Nalva", "noturno a", "manuseio", "safra", "elite", "FF34F", "212", "122", "1", "OK", "15/10/2020", "12:00"));
+            notePSCDao.insert(new NotePSC("Dava", "noturno f", "manuseio", "safra", "elite", "FF34F", "22", "122", "1", "NOK", "15/10/2020", "12:00"));
             return null;
             }
     }

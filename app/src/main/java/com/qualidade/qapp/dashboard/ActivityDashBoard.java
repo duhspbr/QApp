@@ -21,9 +21,6 @@ import java.util.List;
 
 public class ActivityDashBoard extends AppCompatActivity {
 
-    private float val;
-    private int dig[] = new int[2];
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
