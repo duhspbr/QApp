@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_USER =
             "com.qualidade.qapp.login.EXTRA_USER";
 
-    Intent intent;
-    LoginViewModel mViewModel;
+    private Intent intent;
+    private LoginViewModel mViewModel;
     private String auditor;
 
     @Override
