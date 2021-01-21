@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".cqm.ActivityCQM"></activity>
         <activity android:name=".login.LoginRecord" />
         <activity android:name=".login.Login_ListaUsers" />
         <activity android:name=".rejeitos_dod.DashBoardDOD" />
-        <activity android:name=".telainicial.TelaPrincipal"
+        <activity
+            android:name=".telainicial.TelaPrincipal"
             android:parentActivityName=".login.MainActivity" />
         <activity
             android:name=".rejeitos_dod.ActivityRejeitosDod"
