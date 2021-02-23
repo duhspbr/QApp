@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.cqm.ActivityCQM"></activity>
+        <activity android:name=".ui.cqm.PscListActivity"></activity>
+        <activity android:name=".ui.loginkt.LoginActivity" />
+        <activity android:name=".ui.cqm.CqmActivity" />
         <activity android:name=".ui.login.LoginRecordActivity" />
         <activity android:name=".ui.login.LoginListActivity" />
         <activity android:name=".ui.dod.DodDashboardActivity" />
