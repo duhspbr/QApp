@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2B2B29"
-    tools:context=".ui.cqm.CqmActivity">
+    tools:context=".ui.cqm.CqmRecordActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -34,6 +34,14 @@
             android:textSize="16sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinMaquinas"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txtView1"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/txtViewTitulo0"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView0"

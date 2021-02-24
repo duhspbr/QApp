@@ -40,7 +40,6 @@ public class DodRepository {
 
     private static class InsertNoteDodAsyncTask extends AsyncTask<Dod, Void, Void> {
         private final DodDao dodDao;
-
         private InsertNoteDodAsyncTask(DodDao dodDao) { this.dodDao = dodDao; }
 
         @Override

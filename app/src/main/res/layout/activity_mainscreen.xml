@@ -57,7 +57,6 @@
             android:id="@+id/btnCQM"
             android:layout_width="240dp"
             android:layout_height="150dp"
-            android:onClick="callTelaDash"
             android:layout_below="@+id/btnPSC"
             android:layout_marginStart="30dp"
             android:layout_marginTop="30dp"
