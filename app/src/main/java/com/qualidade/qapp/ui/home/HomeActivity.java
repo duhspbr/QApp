@@ -30,6 +30,8 @@ public class HomeActivity extends AppCompatActivity {
 
         Button btnPSC = findViewById(R.id.btnPSC);
         Button btnCqm = findViewById(R.id.btnCQM);
+        Button btnDashboard = findViewById(R.id.btnDashboard);
+        Button btnSair = findViewById(R.id.btn_sair);
 
         Intent intent = getIntent();
         auditor = intent.getStringExtra(LoginMainActivity.EXTRA_USER);
@@ -47,6 +49,20 @@ public class HomeActivity extends AppCompatActivity {
                 callTelaCqm();
             }
         });
+
+        btnDashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callTelaDash();
+            }
+        });
+
+        btnSair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callSair();
+            }
+        });
     }
 
     public void callTelaDod(View view) {
@@ -61,7 +77,7 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void callTelaDash(View view) {
+    public void callTelaDash() {
         Intent intent = new Intent(this, DashboardActivity.class);
         startActivity(intent);
     }
@@ -69,5 +85,9 @@ public class HomeActivity extends AppCompatActivity {
     public void callTelaCqm() {
         Intent intent = new Intent(this, CqmListActivity.class);
         startActivity(intent);
+    }
+
+    public void callSair() {
+        finish();
     }
 }

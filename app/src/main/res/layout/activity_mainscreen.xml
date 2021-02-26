@@ -39,7 +39,7 @@
         android:textColor="#FFFFFF" />
 
         <Button
-            android:id="@+id/btnAlmox"
+            android:id="@+id/btnDashboard"
             android:layout_width="240dp"
             android:layout_height="150dp"
             android:layout_toRightOf="@id/btnPSC"
@@ -48,7 +48,7 @@
             android:background="#656464"
             android:drawableLeft="@drawable/warehouse"
             android:elevation="10dp"
-            android:text="Almox"
+            android:text="Dashboard"
             android:textColor="#FFFFFF"
             android:textSize="8pt"
             android:textStyle="bold" />
@@ -76,7 +76,7 @@
             android:layout_marginTop="30dp"
             android:layout_toRightOf="@+id/btnCQM"
             android:drawableLeft="@drawable/conveyor"
-            android:layout_below="@id/btnAlmox"
+            android:layout_below="@id/btnDashboard"
             android:elevation="10dp"
             android:textStyle="bold"
             android:text="DOD"
@@ -86,6 +86,7 @@
             android:textSize="8pt" />
 
     <Button
+        android:id="@+id/btn_sair"
         android:layout_width="296dp"
         android:layout_height="98dp"
         android:layout_below="@+id/btnCQM"
