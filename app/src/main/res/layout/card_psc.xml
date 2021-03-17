@@ -8,8 +8,9 @@
     android:layout_marginEnd="8dp"
     android:layout_marginStart="8dp"
     android:layout_marginTop="8dp"
-    app:cardCornerRadius="5dp"
-    android:elevation="8dp">
+    app:cardCornerRadius="10dp"
+    android:elevation="8dp"
+    app:cardBackgroundColor="#2DD3CDCD">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -31,6 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Item"
+                android:textColor="#2196F3"
                 android:textSize="24sp"
                 android:textStyle="bold|italic"
                 android:layout_marginStart="40dp"
@@ -41,7 +43,7 @@
                 android:layout_width="490dp"
                 android:layout_height="37dp"
                 android:textSize="24sp"
-                android:textStyle="italic"
+                android:textColor="#FFFFFF"
                 android:layout_below="@+id/textv1"
                 android:layout_marginStart="40dp"
                 android:layout_marginBottom="10dp"/>
@@ -61,6 +63,7 @@
                 android:layout_height="wrap_content"
                 android:text="Descrição"
                 android:textSize="24sp"
+                android:textColor="#2196F3"
                 android:textStyle="bold|italic"
                 android:layout_below="@+id/textvponto"
                 android:layout_marginStart="40dp"
@@ -73,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:text="Pontos auditados"
                 android:textSize="24sp"
+                android:textColor="#2196F3"
                 android:textStyle="bold|italic"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="20dp"/>
@@ -82,7 +86,6 @@
                 android:layout_width="516dp"
                 android:layout_height="80dp"
                 android:textSize="24sp"
-                android:textStyle="italic"
                 android:layout_below="@id/textv3"
                 android:layout_marginStart="40dp"/>
 
@@ -92,7 +95,6 @@
                 android:layout_width="516dp"
                 android:layout_height="65dp"
                 android:textSize="24sp"
-                android:textStyle="italic"
                 android:layout_below="@id/textv2"
                 android:layout_marginStart="40dp"/>
 

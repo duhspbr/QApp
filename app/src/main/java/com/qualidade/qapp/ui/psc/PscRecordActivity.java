@@ -7,11 +7,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.qualidade.qapp.R;
@@ -60,19 +63,20 @@ public class PscRecordActivity extends AppCompatActivity {
     private EditText editTextID;
     private EditText editTextQtdeLote;
     private EditText editTextQtde;
+    private androidx.appcompat.widget.Toolbar psc_toolbar;
 
     private HashMap<String, ListaItens> itens;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_psc_record);
+        setContentView(R.layout.activity_psc_record_scroll);
         setTitle("Auditoria PSC");
         int cor_i = Color.parseColor("#EEEEEE");
         String status_i = "NA";
         carregaSpinners();
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
+        //psc_toolbar = findViewById(R.id.psc_toolbar);
         editTextProdutoAudit = findViewById(R.id.editTextProdutoAudit);
         editTextID = findViewById(R.id.editTextID);
         editTextQtdeLote = findViewById(R.id.editTextQtdeLote);
@@ -80,14 +84,6 @@ public class PscRecordActivity extends AppCompatActivity {
         spinnerClientes = findViewById(R.id.spinner_clientes);
         spinnerLinha = findViewById(R.id.spinner_linha);
         spinnerTurno = findViewById(R.id.spinner_turno);
-        FloatingActionButton floatingActionButtonOK = findViewById(R.id.btnOK);
-
-        floatingActionButtonOK.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                saveNotePsc();
-            }
-        });
 
         itemCards = new ArrayList<>();
         itens = new HashMap<>();
@@ -113,6 +109,27 @@ public class PscRecordActivity extends AppCompatActivity {
         itemCards.add(new ItemCard("19. PERSONALIZAÇÃO (LIMPEZA DAS MÁQUINAS)", "Validar a limpeza das máquinas", "Validado e verificado a descricao do item.", status_i, cor_i, GONE));
 
         buildRecyclerView();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.psc_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_save:
+                saveNotePsc();
+                return true;
+
+            case R.id.action_cancel:
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void carregaSpinners() {

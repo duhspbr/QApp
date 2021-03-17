@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -70,16 +72,17 @@ public class DodRecordActivity extends AppCompatActivity {
         spinnerMaquina = findViewById(R.id.spinner_maquina);
         spinnerTurno = findViewById(R.id.spinner_turno);
         spinnerGaveta = findViewById(R.id.spinner_gaveta);
-        spinnerCodError = findViewById(R.id.spinner_cod);
-        FloatingActionButton floatingActionButtonOK = findViewById(R.id.btnOK);
+        spinnerCodError = findViewById(R.id.spinner_cod_error);
 
-        floatingActionButtonOK.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.N)
-            @Override
-            public void onClick(View v) {
-                saveNoteDod();
-            }
-        });
+//        FloatingActionButton floatingActionButtonOK = findViewById(R.id.btnOK);
+//
+//        floatingActionButtonOK.setOnClickListener(new View.OnClickListener() {
+//            @RequiresApi(api = Build.VERSION_CODES.N)
+//            @Override
+//            public void onClick(View v) {
+//                saveNoteDod();
+//            }
+//        });
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -127,7 +130,7 @@ public class DodRecordActivity extends AppCompatActivity {
         adapter_clientes.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerClientes.setAdapter(adapter_clientes);
 
-        Spinner spinnerCod = findViewById(R.id.spinner_cod);
+        Spinner spinnerCod = findViewById(R.id.spinner_cod_error);
         ArrayAdapter<CharSequence> adpter_cod = ArrayAdapter.createFromResource(this, R.array.cod, android.R.layout.simple_spinner_dropdown_item);
         adpter_cod.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCod.setAdapter(adpter_cod);
@@ -146,5 +149,27 @@ public class DodRecordActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter_gaveta = ArrayAdapter.createFromResource(this, R.array.gaveta, android.R.layout.simple_spinner_dropdown_item);
         adapter_gaveta.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerGaveta.setAdapter(adapter_gaveta);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.psc_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_save:
+                saveNoteDod();
+                return true;
+
+            case R.id.action_cancel:
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
