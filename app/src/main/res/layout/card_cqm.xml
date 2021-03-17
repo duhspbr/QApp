@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="5dp"
+    android:elevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relative_view_not_expand2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Máquina"
+                android:textStyle="bold|italic"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"/>
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/textv4"
+                android:background="#B1B1B1"
+                android:layout_marginStart="20dp">
+            </View>
+
+            <TextView
+                android:id="@+id/text_view_maquina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="DOD2"
+                android:textSize="24sp"
+                android:textStyle="italic|bold"
+                android:layout_below="@+id/textv4"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/text_view_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="0dp"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="23/12/2020"
+                android:textSize="16sp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/text_view_hora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_view_data"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="15:50"
+                android:textSize="16sp"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:id="@+id/textv10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textStyle="bold|italic"
+                android:textSize="18sp"
+                android:layout_marginStart="490dp"
+                android:layout_marginTop="20dp">
+            </TextView>
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/textv10"
+                android:background="#B1B1B1"
+                android:layout_marginStart="490dp">
+            </View>
+
+            <TextView
+                android:id="@+id/text_view_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textv10"
+                android:layout_marginStart="490dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#E53935"
+                android:text="NOK"
+                android:textSize="24sp"
+                android:textStyle="italic|bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

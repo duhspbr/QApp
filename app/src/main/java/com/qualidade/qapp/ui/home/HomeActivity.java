@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.qualidade.qapp.R;
+import com.qualidade.qapp.data.models.Cqm;
+import com.qualidade.qapp.ui.cqm.CqmListActivity;
 import com.qualidade.qapp.ui.dashboard.DashboardActivity;
 import com.qualidade.qapp.ui.login.LoginMainActivity;
 import com.qualidade.qapp.ui.psc.PscListActivity;
@@ -27,6 +29,9 @@ public class HomeActivity extends AppCompatActivity {
         setTitle("Menu Principal");
 
         Button btnPSC = findViewById(R.id.btnPSC);
+        Button btnCqm = findViewById(R.id.btnCQM);
+        Button btnDashboard = findViewById(R.id.btnDashboard);
+        Button btnSair = findViewById(R.id.btn_sair);
 
         Intent intent = getIntent();
         auditor = intent.getStringExtra(LoginMainActivity.EXTRA_USER);
@@ -35,6 +40,27 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 callTelaCabecalho();
+            }
+        });
+
+        btnCqm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callTelaCqm();
+            }
+        });
+
+        btnDashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callTelaDash();
+            }
+        });
+
+        btnSair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callSair();
             }
         });
     }
@@ -51,8 +77,17 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void callTelaDash(View view) {
+    public void callTelaDash() {
         Intent intent = new Intent(this, DashboardActivity.class);
         startActivity(intent);
+    }
+
+    public void callTelaCqm() {
+        Intent intent = new Intent(this, CqmListActivity.class);
+        startActivity(intent);
+    }
+
+    public void callSair() {
+        finish();
     }
 }

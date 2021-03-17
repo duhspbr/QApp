@@ -1,9 +1,1284 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.cqm.ActivityCQM">
+    android:background="#2B2B29"
+    tools:context=".ui.cqm.CqmRecordActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Formulário de Controle\nCartões Personalizados"
+            android:textSize="28sp"
+            android:textColor="#FFFFFF"
+            android:maxLines="2"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtViewTitulo0"
+            android:layout_below="@+id/txtView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Localização das Trilhas magnéticas"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinMaquinas"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txtView1"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/txtViewTitulo0"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView0"
+            android:layout_below="@+id/txtViewTitulo0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="#19D3CDCD">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtViewTipo0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:text="Tipo"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#2196F3"/>
+
+                <RadioGroup
+                    android:id="@+id/rdGroup0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/txtViewTipo0">
+
+                    <RadioButton
+                        android:id="@+id/rd0_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ROT - Rotina"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/rd0_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRE - Preventiva"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/rd0_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="COR - Corretiva"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtViewResultado0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/rdGroup0"
+                    android:text="Resultado"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#2196F3"/>
+
+                <RadioGroup
+                    android:id="@+id/rdGroup02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/txtViewResultado0">
+
+                    <RadioButton
+                        android:id="@+id/rd0_2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OK"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/rd0_2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NOK"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/rd0_2_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="N/A"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtViewChamado0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_below="@+id/rdGroup0"
+                    android:layout_toRightOf="@+id/txtViewResultado0"
+                    android:text="Chamado"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#2196F3"/>
+
+                <EditText
+                    android:id="@+id/editTextChamado_0"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/txtViewChamado0"
+                    android:layout_toRightOf="@+id/rdGroup02"
+                    android:layout_marginLeft="30dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtViewTitulo1"
+            android:layout_below="@+id/cardView0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Verificação de Características de \nCodificação Magnética"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_below="@+id/txtViewTitulo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="#19D3CDCD">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtViewTipo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:text="Tipo"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#2196F3"/>
+
+                <RadioGroup
+                    android:id="@+id/rdGroup1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/txtViewTipo1">
+
+                    <RadioButton
+                        android:id="@+id/rd1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ROT - Rotina"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/rd1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRE - Preventiva"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/rd1_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="COR - Corretiva"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtViewResultado1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/rdGroup1"
+                    android:text="Resultado"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#2196F3"/>
+
+                <RadioGroup
+                    android:id="@+id/rdGroup2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/txtViewResultado1">
+
+                    <RadioButton
+                        android:id="@+id/rd2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OK"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/rd2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NOK"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/rd2_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="N/A"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtViewChamado1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_below="@+id/rdGroup1"
+                    android:layout_toRightOf="@+id/txtViewResultado1"
+                    android:text="Chamado"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#2196F3"/>
+
+                <EditText
+                    android:id="@+id/editTextChamado_1"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/txtViewChamado1"
+                    android:layout_toRightOf="@+id/rdGroup2"
+                    android:layout_marginLeft="30dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtViewTitulo2"
+            android:layout_below="@+id/cardView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Teste de empenamento do cartão,\n após a personalização"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_below="@+id/txtViewTitulo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="#19D3CDCD">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtViewTipo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:text="Tipo"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#2196F3"/>
+
+                <RadioGroup
+                    android:id="@+id/rdGroup3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/txtViewTipo2">
+
+                    <RadioButton
+                        android:id="@+id/rd3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ROT - Rotina"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/rd3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRE - Preventiva"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/rd3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="COR - Corretiva"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtViewResultado2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/rdGroup3"
+                    android:text="Resultado"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#2196F3"/>
+
+                <RadioGroup
+                    android:id="@+id/rdGroup4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/txtViewResultado2">
+
+                    <RadioButton
+                        android:id="@+id/rd4_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OK"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/rd4_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NOK"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/rd4_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="N/A"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtViewChamado2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_below="@+id/rdGroup3"
+                    android:layout_toRightOf="@+id/txtViewResultado2"
+                    android:text="Chamado"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#2196F3"/>
+
+                <EditText
+                    android:id="@+id/editTextChamado2"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/txtViewChamado2"
+                    android:layout_toRightOf="@+id/rdGroup4"
+                    android:layout_marginLeft="30dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtViewTitulo3"
+            android:layout_below="@+id/cardView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Stress Residual após aplicação do Embosser,\n Termográfia ou Infiller"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_below="@+id/txtViewTitulo3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="#19D3CDCD">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtViewTipo3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="10sp"
+                    android:text="Tipo"
+                    android:textColor="#2196F3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rdGroup5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtViewTipo3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rd5_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ROT - Rotina"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rd5_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRE - Preventiva"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rd5_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="COR - Corretiva"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtViewResultado3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rdGroup5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10sp"
+                    android:text="Resultado"
+                    android:textColor="#2196F3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rdGroup6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtViewResultado3"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rd6_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OK"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rd6_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NOK"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rd6_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="N/A"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtViewChamado3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rdGroup5"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="10sp"
+                    android:layout_toRightOf="@+id/txtViewResultado3"
+                    android:text="Chamado"
+                    android:textColor="#2196F3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextChamado3"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/txtViewChamado3"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/rdGroup6" />
+
+                <TextView
+                    android:id="@+id/txtViewObs1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rdGroup6"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10sp"
+                    android:text="Observação"
+                    android:textColor="#2196F3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextObs1"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/txtViewObs1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtViewTitulo4"
+            android:layout_below="@+id/cardView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Aparência e intencidade do Infiler"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_below="@+id/txtViewTitulo4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="#19D3CDCD">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtViewTipo4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="10sp"
+                    android:text="Tipo"
+                    android:textColor="#2196F3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rdGroup7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtViewTipo4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rd7_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ROT - Rotina"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rd7_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRE - Preventiva"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rd7_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="COR - Corretiva"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtViewResultado4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rdGroup7"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10sp"
+                    android:text="Resultado"
+                    android:textColor="#2196F3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rdGroup8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtViewResultado4"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rd8_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OK"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rd8_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NOK"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rd8_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="N/A"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtViewChamado4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rdGroup7"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="10sp"
+                    android:layout_toRightOf="@+id/txtViewResultado4"
+                    android:text="Chamado"
+                    android:textColor="#2196F3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextChamado4"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/txtViewChamado4"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/rdGroup8" />
+
+                <TextView
+                    android:id="@+id/txtViewObs2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rdGroup8"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10sp"
+                    android:text="Observação"
+                    android:textColor="#2196F3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextObs2"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/txtViewObs2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtViewTitulo5"
+            android:layout_below="@+id/cardView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Teste de Altura do Embosser"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtViewTitulo6"
+            android:layout_below="@+id/cardView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txtViewTitulo5"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:text="Com ou sem Embosser?"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/rdGroupYesNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/txtViewTitulo6"
+            android:layout_below="@+id/cardView4"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdCom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sim"/>
+
+            <RadioButton
+                android:id="@+id/rdSem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não"/>
+
+        </RadioGroup>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_below="@+id/txtViewTitulo5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="#19D3CDCD">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtViewTipo5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="10sp"
+                    android:text="Tipo"
+                    android:textColor="#2196F3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rdGroup9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtViewTipo5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rd9_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ROT - Rotina"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rd9_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRE - Preventiva"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rd9_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="COR - Corretiva"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtViewResultado5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rdGroup9"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10sp"
+                    android:text="Resultado"
+                    android:textColor="#2196F3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rdGroup10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtViewResultado5"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rd10_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OK"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rd10_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NOK"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rd10_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="N/A"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtViewChamado5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rdGroup10"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="10sp"
+                    android:layout_toRightOf="@+id/txtViewResultado5"
+                    android:text="Chamado"
+                    android:textColor="#2196F3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextChamado5"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/txtViewChamado5"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/rdGroup10" />
+
+                <TextView
+                    android:id="@+id/txtViewObs3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rdGroup10"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10sp"
+                    android:text="Observação"
+                    android:textColor="#2196F3"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextObs3"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/txtViewObs3"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/editTextObs3"
+                    android:layout_marginTop="10dp"
+                    android:background="#807E7E"/>
+
+                <TextView
+                    android:id="@+id/txtView_p1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Área 1 - Min 0,40 Max 0,48\nPt1(mm)    Pt2(mm)    Pt3(mm)"
+                    android:layout_below="@+id/line1"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/editText_area1_p1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt1"
+                    android:layout_below="@+id/txtView_p1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_area1_p2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt2"
+                    android:layout_below="@+id/txtView_p1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/editText_area1_p1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_area1_p3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt3"
+                    android:layout_below="@+id/txtView_p1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/editText_area1_p2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/txtView_p2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Área 2 - Min 0,36mm Max 0,46mm"
+                    android:layout_below="@+id/editText_area1_p3"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/txtViewAreaS4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S4\nPt1(mm)    Pt2(mm)    Pt3(mm)"
+                    android:layout_below="@+id/txtView_p2"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/editText_area4_p1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt1"
+                    android:layout_below="@+id/txtViewAreaS4"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_area4_p2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt2"
+                    android:layout_below="@+id/txtViewAreaS4"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/editText_area1_p1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_area4_p3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt3"
+                    android:layout_below="@+id/txtViewAreaS4"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/editText_area1_p2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/txtViewAreaS3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S3\nPt1(mm)    Pt2(mm)    Pt3(mm)"
+                    android:layout_toRightOf="@+id/txtViewAreaS4"
+                    android:layout_below="@+id/txtView_p2"
+                    android:layout_marginLeft="60dp"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/editText_area3_p1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt1"
+                    android:layout_below="@+id/txtViewAreaS3"
+                    android:layout_toRightOf="@+id/editText_area4_p3"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_area3_p2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt2"
+                    android:layout_below="@+id/txtViewAreaS3"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/editText_area3_p1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_area3_p3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt3"
+                    android:layout_below="@+id/txtViewAreaS3"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/editText_area3_p2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+
+                <TextView
+                    android:id="@+id/txtViewAreaS2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editText_area3_p3"
+                    android:text="S2\nPt1(mm)    Pt2(mm)    Pt3(mm)"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+
+                <EditText
+                    android:id="@+id/editText_area2_p1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_below="@+id/txtViewAreaS2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_area2_p2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt2"
+                    android:layout_below="@+id/txtViewAreaS2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/editText_area2_p1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_area2_p3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt3"
+                    android:layout_below="@+id/txtViewAreaS2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/editText_area2_p2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+
+                <TextView
+                    android:id="@+id/txtViewAreaS1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editText_area3_p3"
+                    android:layout_toRightOf="@+id/txtViewAreaS2"
+                    android:text="S1\nPt1(mm)    Pt2(mm)    Pt3(mm)"
+                    android:layout_marginLeft="60dp"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+
+                <EditText
+                    android:id="@+id/editText_area11_p1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt1"
+                    android:layout_below="@+id/txtViewAreaS1"
+                    android:layout_toRightOf="@+id/editText_area2_p3"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_area11_p2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt2"
+                    android:layout_below="@+id/txtViewAreaS1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/editText_area11_p1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_area11_p3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:maxLines="1"
+                    android:hint="Pt3"
+                    android:layout_below="@+id/txtViewAreaS1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/editText_area11_p2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_below="@+id/editText_area11_p3"
+                    android:layout_centerHorizontal="true"
+                    android:text="Salvar"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</ScrollView>

@@ -37,34 +37,25 @@ public class Dod {
     public int getId() {
         return id;
     }
-
     public String getCliente() {
         return cliente;
     }
-
     public String getStr_dod() {
         return str_dod;
     }
-
     public String getTurno() {
         return turno;
     }
-
     public String getGaveta() {
         return gaveta;
     }
-
     public String getCod_error() {
         return cod_error;
     }
-
     public int getQuant() {
         return quant;
     }
-
     public String getHora() { return hora; }
-
     public String getDate() { return date; }
-
     public String getAuditor() { return auditor; }
 }
