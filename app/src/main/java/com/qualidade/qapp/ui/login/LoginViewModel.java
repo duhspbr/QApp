@@ -5,6 +5,7 @@ import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.qualidade.qapp.data.models.Login;
 import com.qualidade.qapp.data.remote.repository.LoginRepository;
@@ -27,8 +28,6 @@ public class LoginViewModel extends AndroidViewModel {
     public void update(Login user) { repository.update(user); }
 
     public void delete(Login user) { repository.delete(user); }
-
-    public void deleteAllUsers(Login login) { repository.deleteAllUsers(); }
 
     public LiveData<List<Login>> getAllUsers() { return allUsers; }
 

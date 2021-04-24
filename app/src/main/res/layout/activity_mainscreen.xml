@@ -31,6 +31,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginStart="30dp"
         android:drawableLeft="@drawable/creditcard"
+        android:paddingStart="30dp"
         android:elevation="10dp"
         android:textStyle="bold"
         android:text="PSC"
@@ -38,14 +39,17 @@
         android:textSize="8pt"
         android:textColor="#FFFFFF" />
 
+
+
         <Button
             android:id="@+id/btnDashboard"
-            android:layout_width="240dp"
+            android:layout_width="260dp"
             android:layout_height="150dp"
             android:layout_toRightOf="@id/btnPSC"
             android:layout_marginStart="40dp"
             android:layout_marginTop="100dp"
             android:background="#656464"
+            android:paddingStart="30dp"
             android:drawableLeft="@drawable/warehouse"
             android:elevation="10dp"
             android:text="Dashboard"
@@ -61,6 +65,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="30dp"
             android:drawableLeft="@drawable/factory"
+            android:paddingStart="30dp"
             android:elevation="10dp"
             android:textStyle="bold"
             android:text="CQM"
@@ -70,17 +75,17 @@
 
         <Button
             android:id="@+id/btnDOD"
-            android:layout_width="240dp"
+            android:layout_width="260dp"
             android:layout_height="150dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="30dp"
+            android:paddingStart="30dp"
             android:layout_toRightOf="@+id/btnCQM"
             android:drawableLeft="@drawable/conveyor"
             android:layout_below="@id/btnDashboard"
             android:elevation="10dp"
             android:textStyle="bold"
             android:text="DOD"
-            android:onClick="callTelaDod"
             android:background="#656464"
             android:textColor="#FFFFFF"
             android:textSize="8pt" />

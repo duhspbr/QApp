@@ -71,4 +71,9 @@
         <item>DC 06</item>
         <item>NA</item>
     </string-array>
+    <string name="title_activity_login_1_1">LoginActivity_1_1</string>
+    <string name="tab_text_1">Login</string>
+    <string name="tab_text_2">Cadastro</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

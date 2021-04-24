@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background2"
-    tools:context=".ui.login.LoginActivity">
+    tools:context=".ui.login.LoginMainActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="450dp"
@@ -39,7 +39,6 @@
                 android:drawableLeft="@drawable/ic_login"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:drawablePadding="20dp"
                 android:textSize="28dp"
                 android:background="@drawable/border_edit_text"
                 android:hint="   User" />
@@ -53,8 +52,7 @@
                 android:layout_marginEnd="50dp"
                 android:layout_marginTop="20dp"
                 android:paddingStart="20dp"
-                android:drawablePadding="20dp"
-                android:paddingEnd="30dp"
+                android:paddingEnd="20dp"
                 android:drawableLeft="@drawable/ic_lock"
                 android:background="@drawable/border_edit_text"
                 android:hint="   Senha"

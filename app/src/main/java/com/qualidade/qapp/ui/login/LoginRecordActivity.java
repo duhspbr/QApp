@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.qualidade.qapp.R;
+import com.qualidade.qapp.databinding.ActivityLoginRecordBinding;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -31,21 +32,15 @@ public class LoginRecordActivity extends AppCompatActivity {
     public static final String EXTRA_SENHA =
             "com.qualidade.qapp.login.EXTRA_SENHA";
 
-    private EditText editUser;
-    private EditText editSenha;
-    private EditText editConfirmSenha;
+    private final ActivityLoginRecordBinding binding = ActivityLoginRecordBinding.inflate(getLayoutInflater());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_record);
+        View view = binding.getRoot();
+        setContentView(view);
 
-        editUser = findViewById(R.id.editUser);
-        editSenha = findViewById(R.id.editSenha);
-        editConfirmSenha = findViewById(R.id.editConfirmar);
-
-        Button buttonOK = findViewById(R.id.btnSalvar);
-        buttonOK.setOnClickListener(new View.OnClickListener() {
+        binding.btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 saveUser();
@@ -54,10 +49,9 @@ public class LoginRecordActivity extends AppCompatActivity {
     }
 
     public void saveUser() {
-
-        String usuario = editUser.getText().toString();
-        String senha = editSenha.getText().toString();
-        String confirmSenha = editConfirmSenha.getText().toString();
+        String usuario = binding.editUser.getText().toString();
+        String senha = binding.editSenha.getText().toString();
+        String confirmSenha = binding.editConfirmar.getText().toString();
 
         if (usuario.trim().isEmpty() || senha.trim().isEmpty() || confirmSenha.trim().isEmpty()) {
             Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show();
@@ -65,8 +59,7 @@ public class LoginRecordActivity extends AppCompatActivity {
         }
         else if (!senha.equals(confirmSenha)) {
             Toast.makeText(this, "Senhas divergentes!", Toast.LENGTH_SHORT).show();
-        }
-        else {
+        } else {
             Intent data = new Intent();
             data.putExtra(EXTRA_USER, usuario);
             data.putExtra(EXTRA_SENHA, senha);

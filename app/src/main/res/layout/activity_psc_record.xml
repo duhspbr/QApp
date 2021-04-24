@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBF9F9">
+    android:background="#232323">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -44,7 +44,7 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/textv1"
                     android:layout_marginStart="30dp"
-                    android:backgroundTint="#FBFBFB"
+                    android:background="@drawable/border"
                     android:textSize="24sp"
                     android:textColor="#FFFFFF" />
 
@@ -62,9 +62,9 @@
                     android:id="@+id/spinner_linha"
                     android:layout_width="160dp"
                     android:layout_height="40dp"
+                    android:background="@drawable/border"
                     android:layout_below="@+id/textv1"
                     android:layout_marginStart="210dp"
-                    android:backgroundTint="#FFFFFF"
                     android:textColor="#FFFFFF"/>
 
                 <TextView
@@ -84,6 +84,7 @@
                     android:layout_below="@+id/textv1"
                     android:layout_marginStart="400dp"
                     android:textSize="18sp"
+                    android:background="@drawable/border"
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF"/>
 
@@ -93,8 +94,9 @@
                     android:layout_height="45dp"
                     android:layout_below="@+id/spinner_turno"
                     android:layout_marginTop="60dp"
+                    android:background="@drawable/border"
                     android:layout_marginStart="30sp"
-                    android:hint="Produto auditado"
+                    android:hint="  Produto"
                     android:textSize="22sp"
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF" />
@@ -103,10 +105,11 @@
                     android:id="@+id/editTextID"
                     android:layout_width="160dp"
                     android:layout_height="45dp"
+                    android:background="@drawable/border"
                     android:layout_below="@+id/spinner_linha"
                     android:layout_marginTop="60dp"
                     android:layout_marginStart="210dp"
-                    android:hint="ID da ordem"
+                    android:hint="  ID"
                     android:textSize="22sp"
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF" />
@@ -118,7 +121,8 @@
                     android:layout_below="@+id/spinner_clientes"
                     android:layout_marginTop="60dp"
                     android:layout_marginStart="400dp"
-                    android:hint="Qntde do lote"
+                    android:hint="  QTDE"
+                    android:background="@drawable/border"
                     android:inputType="number"
                     android:textSize="22sp"
                     android:textColor="#FFFFFF"
@@ -131,9 +135,10 @@
                     android:layout_below="@+id/editTextProdutoAudit"
                     android:layout_marginStart="400dp"
                     android:layout_marginTop="30dp"
-                    android:hint="Qntde da amostra"
+                    android:hint="Qntde Amostra"
                     android:inputType="number"
                     android:textSize="22sp"
+                    android:background="@drawable/border"
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF" />
 

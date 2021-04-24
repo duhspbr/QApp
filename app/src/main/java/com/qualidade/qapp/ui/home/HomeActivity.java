@@ -8,10 +8,10 @@ import android.view.View;
 import android.widget.Button;
 
 import com.qualidade.qapp.R;
-import com.qualidade.qapp.data.models.Cqm;
+import com.qualidade.qapp.databinding.ActivityLoginBinding;
+import com.qualidade.qapp.databinding.ActivityMainscreenBinding;
 import com.qualidade.qapp.ui.cqm.CqmListActivity;
 import com.qualidade.qapp.ui.dashboard.DashboardActivity;
-import com.qualidade.qapp.ui.login.LoginMainActivity;
 import com.qualidade.qapp.ui.psc.PscListActivity;
 import com.qualidade.qapp.ui.dod.DodListActivity;
 
@@ -20,74 +20,46 @@ public class HomeActivity extends AppCompatActivity {
     public static final String EXTRA_USER =
             "com.qualidade.qapp.HomeActivity.EXTRA_USER";
 
-    private String auditor;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mainscreen);
-        setTitle("Menu Principal");
+        final ActivityMainscreenBinding binding = ActivityMainscreenBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
 
-        Button btnPSC = findViewById(R.id.btnPSC);
-        Button btnCqm = findViewById(R.id.btnCQM);
-        Button btnDashboard = findViewById(R.id.btnDashboard);
-        Button btnSair = findViewById(R.id.btn_sair);
-
-        Intent intent = getIntent();
-        auditor = intent.getStringExtra(LoginMainActivity.EXTRA_USER);
-
-        btnPSC.setOnClickListener(new View.OnClickListener() {
+        binding.btnPSC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callTelaCabecalho();
+                startActivity(new Intent(getApplicationContext(), PscListActivity.class));
             }
         });
 
-        btnCqm.setOnClickListener(new View.OnClickListener() {
+        binding.btnCQM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callTelaCqm();
+                startActivity(new Intent(getApplicationContext(), CqmListActivity.class));
             }
         });
 
-        btnDashboard.setOnClickListener(new View.OnClickListener() {
+        binding.btnDashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callTelaDash();
+                startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
             }
         });
 
-        btnSair.setOnClickListener(new View.OnClickListener() {
+        binding.btnSair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                callSair();
+                finish();
             }
         });
-    }
 
-    public void callTelaDod(View view) {
-        Intent intent = new Intent(this, DodListActivity.class);
-        intent.putExtra(EXTRA_USER, auditor);
-        startActivity(intent);
-    }
-
-    public void callTelaCabecalho() {
-        Intent intent = new Intent(this, PscListActivity.class);
-        intent.putExtra(EXTRA_USER, auditor);
-        startActivity(intent);
-    }
-
-    public void callTelaDash() {
-        Intent intent = new Intent(this, DashboardActivity.class);
-        startActivity(intent);
-    }
-
-    public void callTelaCqm() {
-        Intent intent = new Intent(this, CqmListActivity.class);
-        startActivity(intent);
-    }
-
-    public void callSair() {
-        finish();
+        binding.btnDOD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), DodListActivity.class));
+            }
+        });
     }
 }

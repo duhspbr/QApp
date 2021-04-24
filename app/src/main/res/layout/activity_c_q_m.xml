@@ -31,17 +31,22 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="25dp"
             android:text="Localização das Trilhas magnéticas"
-            android:textSize="16sp"
+            android:textSize="22dp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
 
-        <Spinner
-            android:id="@+id/spinMaquinas"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_below="@+id/txtView1"
-            android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/txtViewTitulo0"/>
+        <EditText
+            android:id="@+id/editMaquina"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/lblLogin"
+            android:layout_toRightOf="@id/txtViewTitulo0"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:textSize="24dp"
+            android:background="@drawable/border_edit_blue_text"
+            android:hint="    Maquina"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView0"
@@ -50,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            app:cardCornerRadius="5dp"
+            app:cardCornerRadius="15dp"
             android:layout_marginTop="15dp"
             app:cardBackgroundColor="#19D3CDCD">
 
@@ -62,18 +67,18 @@
                     android:id="@+id/txtViewTipo0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10sp"
-                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="15sp"
+                    android:layout_marginLeft="20sp"
                     android:text="Tipo"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textColor="#2196F3"/>
 
                 <RadioGroup
                     android:id="@+id/rdGroup0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:layout_below="@+id/txtViewTipo0">
@@ -109,11 +114,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10sp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_below="@+id/rdGroup0"
                     android:text="Resultado"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textColor="#2196F3"/>
 
                 <RadioGroup
@@ -161,7 +166,7 @@
                     android:layout_toRightOf="@+id/txtViewResultado0"
                     android:text="Chamado"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textColor="#2196F3"/>
 
                 <EditText
@@ -170,6 +175,7 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
                     android:layout_below="@+id/txtViewChamado0"
+                    android:background="@drawable/border_card"
                     android:layout_toRightOf="@+id/rdGroup02"
                     android:layout_marginLeft="30dp"/>
 
@@ -212,7 +218,7 @@
                     android:layout_marginLeft="10sp"
                     android:text="Tipo"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textColor="#2196F3"/>
 
                 <RadioGroup
@@ -259,7 +265,7 @@
                     android:layout_below="@+id/rdGroup1"
                     android:text="Resultado"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textColor="#2196F3"/>
 
                 <RadioGroup
@@ -307,7 +313,7 @@
                     android:layout_toRightOf="@+id/txtViewResultado1"
                     android:text="Chamado"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textColor="#2196F3"/>
 
                 <EditText
@@ -358,7 +364,7 @@
                     android:layout_marginLeft="10sp"
                     android:text="Tipo"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textColor="#2196F3"/>
 
                 <RadioGroup
@@ -405,7 +411,7 @@
                     android:layout_below="@+id/rdGroup3"
                     android:text="Resultado"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textColor="#2196F3"/>
 
                 <RadioGroup
@@ -453,7 +459,7 @@
                     android:layout_toRightOf="@+id/txtViewResultado2"
                     android:text="Chamado"
                     android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textColor="#2196F3"/>
 
                 <EditText
@@ -504,7 +510,7 @@
                     android:layout_marginTop="10sp"
                     android:text="Tipo"
                     android:textColor="#2196F3"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textStyle="bold" />
 
                 <RadioGroup
@@ -551,7 +557,7 @@
                     android:layout_marginTop="10sp"
                     android:text="Resultado"
                     android:textColor="#2196F3"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textStyle="bold" />
 
                 <RadioGroup
@@ -599,7 +605,7 @@
                     android:layout_toRightOf="@+id/txtViewResultado3"
                     android:text="Chamado"
                     android:textColor="#2196F3"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textStyle="bold" />
 
                 <EditText
@@ -620,7 +626,7 @@
                     android:layout_marginTop="10sp"
                     android:text="Observação"
                     android:textColor="#2196F3"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textStyle="bold" />
 
                 <EditText
@@ -671,7 +677,7 @@
                     android:layout_marginTop="10sp"
                     android:text="Tipo"
                     android:textColor="#2196F3"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textStyle="bold" />
 
                 <RadioGroup
@@ -718,7 +724,7 @@
                     android:layout_marginTop="10sp"
                     android:text="Resultado"
                     android:textColor="#2196F3"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textStyle="bold" />
 
                 <RadioGroup
@@ -766,7 +772,7 @@
                     android:layout_toRightOf="@+id/txtViewResultado4"
                     android:text="Chamado"
                     android:textColor="#2196F3"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textStyle="bold" />
 
                 <EditText
@@ -787,7 +793,7 @@
                     android:layout_marginTop="10sp"
                     android:text="Observação"
                     android:textColor="#2196F3"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textStyle="bold" />
 
                 <EditText
@@ -875,7 +881,7 @@
                     android:layout_marginTop="10sp"
                     android:text="Tipo"
                     android:textColor="#2196F3"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textStyle="bold" />
 
                 <RadioGroup
@@ -922,7 +928,7 @@
                     android:layout_marginTop="10sp"
                     android:text="Resultado"
                     android:textColor="#2196F3"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textStyle="bold" />
 
                 <RadioGroup
@@ -970,7 +976,7 @@
                     android:layout_toRightOf="@+id/txtViewResultado5"
                     android:text="Chamado"
                     android:textColor="#2196F3"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textStyle="bold" />
 
                 <EditText
@@ -991,7 +997,7 @@
                     android:layout_marginTop="10sp"
                     android:text="Observação"
                     android:textColor="#2196F3"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/opc_padding"
                     android:textStyle="bold" />
 
                 <EditText

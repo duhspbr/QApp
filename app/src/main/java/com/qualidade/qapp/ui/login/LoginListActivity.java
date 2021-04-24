@@ -41,27 +41,27 @@ public class LoginListActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        final LoginAdapter adapter = new LoginAdapter();
-        recyclerView.setAdapter(adapter);
+//        final LoginAdapter adapter = new LoginAdapter();
+//        recyclerView.setAdapter(adapter);
+//
+//        adapter.setOnItemClickListener(new LoginAdapter.OnItemClickListener() {
+//            @Override
+//            public void onEditClick(int position) {
+//
+//            }
+//
+//            @Override
+//            public void onExcludeClick(int position) {
+//
+//            }
+//        });
 
-        adapter.setOnItemClickListener(new LoginAdapter.OnItemClickListener() {
-            @Override
-            public void onEditClick(int position) {
 
-            }
-
-            @Override
-            public void onExcludeClick(int position) {
-
-            }
-        });
-
-
-        loginViewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(this.getApplication())).get(LoginViewModel.class);
-        loginViewModel.getAllUsers().observe(this, new Observer<List<Login>>() {
-            @Override
-            public void onChanged(List<Login> logins) { adapter.setLogins(logins); }
-        });
+//        loginViewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(this.getApplication())).get(LoginViewModel.class);
+//        loginViewModel.getAllUsers().observe(this, new Observer<List<Login>>() {
+//            @Override
+//            public void onChanged(List<Login> logins) { adapter.setLogins(logins); }
+//        });
     }
 
     @Override

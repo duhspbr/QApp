@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#070707"
+    android:background="#FFFFFF"
     tools:context=".ui.dod.DodRecordActivity">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginTop="25dp"
         android:layout_marginLeft="25sp"
         android:text="Registros \nrejeitos DOD"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="40sp"
         android:textStyle="bold"/>
 
@@ -27,7 +27,8 @@
         android:layout_marginRight="25dp"
         app:cardCornerRadius="10dp"
         android:layout_marginTop="15dp"
-        app:cardBackgroundColor="#2DD3CDCD">
+        android:background="@drawable/border"
+        app:cardBackgroundColor="#FFFFFF">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -48,9 +49,9 @@
                 android:id="@+id/spinner_turno"
                 android:layout_width="201dp"
                 android:layout_height="80dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/border"
                 android:layout_below="@+id/lblTurno"
-                android:backgroundTint="#4D4A4A"
                 />
 
             <TextView
@@ -70,8 +71,8 @@
                 android:layout_width="201dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="20dp"
+                android:background="@drawable/border"
                 android:layout_below="@+id/lblAuditor"
-                android:backgroundTint="#4D4A4A"
                 />
 
             <TextView
@@ -84,16 +85,17 @@
                 android:textSize="18sp"
                 android:textColor="#2196F3"
                 android:layout_marginTop="30dp"
-                android:layout_marginStart="40dp"/>
+                android:layout_marginStart="95dp"/>
 
             <Spinner
                 android:id="@+id/spinner_cliente"
                 android:layout_width="201dp"
                 android:layout_height="80dp"
-                android:layout_toRightOf="@+id/spinner_turno"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
                 android:layout_marginLeft="40dp"
+                android:background="@drawable/border"
                 android:layout_below="@+id/lblCliente"
-                android:backgroundTint="#4D4A4A"
                 />
 
             <TextView
@@ -107,16 +109,17 @@
                 android:textSize="18sp"
                 android:textColor="#2196F3"
                 android:layout_marginTop="30dp"
-                android:layout_marginStart="40dp"/>
+                android:layout_marginStart="95dp"/>
 
             <Spinner
                 android:id="@+id/spinner_maquina"
                 android:layout_width="201dp"
                 android:layout_height="80dp"
-                android:layout_toRightOf="@+id/spinner_turno"
+                android:layout_alignParentEnd="true"
                 android:layout_marginLeft="40dp"
+                android:layout_marginEnd="30dp"
                 android:layout_below="@+id/lblMaquina"
-                android:backgroundTint="#4D4A4A"
+                android:background="@drawable/border"
                 />
 
             <TextView
@@ -136,8 +139,8 @@
                 android:layout_width="201dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="20dp"
+                android:background="@drawable/border"
                 android:layout_below="@+id/lblGaveta"
-                android:backgroundTint="#4D4A4A"
                 />
 
             <TextView
@@ -151,16 +154,17 @@
                 android:textSize="18sp"
                 android:textColor="#2196F3"
                 android:layout_marginTop="30dp"
-                android:layout_marginStart="40dp"/>
+                android:layout_marginStart="95dp"/>
 
             <Spinner
                 android:id="@+id/spinner_cod_error"
                 android:layout_width="201dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="40dp"
+                android:background="@drawable/border"
+                android:layout_alignParentEnd="true"
                 android:layout_below="@+id/lblCodError"
-                android:layout_toRightOf="@+id/spinner_gaveta"
-                android:backgroundTint="#4D4A4A"
+                android:layout_marginEnd="30dp"
                 />
 
             <TextView
@@ -180,8 +184,8 @@
                 android:layout_width="201dp"
                 android:layout_height="80dp"
                 android:layout_marginLeft="20dp"
+                android:background="@drawable/border"
                 android:layout_below="@+id/lblQuantidade"
-                android:backgroundTint="#F3F2F2"
                 android:layout_marginBottom="40dp"/>
 
         </RelativeLayout>

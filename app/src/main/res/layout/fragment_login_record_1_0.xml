@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.login.LoginMainActivity">
+
+    <EditText
+        android:id="@+id/editUser"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/lblLogin"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_login"
+        android:paddingStart="20dp"
+        android:textSize="32dp"
+        android:background="@drawable/border_edit_text"
+        android:hint="   User" />
+
+    <EditText
+        android:id="@+id/editPass"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/editUser"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="40dp"
+        android:paddingStart="20dp"
+        android:drawableLeft="@drawable/ic_lock"
+        android:background="@drawable/border_edit_text"
+        android:hint="   Senha"
+        android:textSize="32dp"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/editRepeatPass"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/editPass"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="40dp"
+        android:paddingStart="20dp"
+        android:drawableLeft="@drawable/ic_lock"
+        android:background="@drawable/border_edit_text"
+        android:hint="   Repita a senha"
+        android:textSize="32dp"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogar"
+        android:layout_width="229dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/editRepeatPass"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="30dp"
+        android:background="#A4474141"
+        android:elevation="9dp"
+        android:text="Logar"
+        android:textColor="#FFFFFF"
+        android:textSize="32dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -18,6 +18,8 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.qualidade.qapp.R;
+import com.qualidade.qapp.databinding.ActivityDodRecordBinding;
+import com.qualidade.qapp.databinding.ActivityMainscreenBinding;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -63,7 +65,8 @@ public class DodRecordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dod_record);
+        ActivityDodRecordBinding biding = ActivityDodRecordBinding.inflate(getLayoutInflater());
+        setContentView(biding.getRoot());
 
         carregaSpinners();
 
@@ -73,16 +76,6 @@ public class DodRecordActivity extends AppCompatActivity {
         spinnerTurno = findViewById(R.id.spinner_turno);
         spinnerGaveta = findViewById(R.id.spinner_gaveta);
         spinnerCodError = findViewById(R.id.spinner_cod_error);
-
-//        FloatingActionButton floatingActionButtonOK = findViewById(R.id.btnOK);
-//
-//        floatingActionButtonOK.setOnClickListener(new View.OnClickListener() {
-//            @RequiresApi(api = Build.VERSION_CODES.N)
-//            @Override
-//            public void onClick(View v) {
-//                saveNoteDod();
-//            }
-//        });
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
