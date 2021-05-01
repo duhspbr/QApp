@@ -17,6 +17,7 @@ import java.util.TimeZone;
 public class PscRepository {
     private final PscDao pscDao;
     private final LiveData<List<Psc>> allNotesPsc;
+    public final LiveData<List<Psc>> allClientesAudits;
 
     Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("America/Sao_Paulo"));
     SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
@@ -26,6 +27,7 @@ public class PscRepository {
         PscDatabase pscDatabase = PscDatabase.getInstance(application);
         pscDao = pscDatabase.notePSCDao();
         allNotesPsc = pscDao.getAllPscNotes(_date);
+        allClientesAudits = pscDao.getAllClienteAudits();
     }
 
     public void insert(Psc psc) { new InsertNotePscAsyncTask(pscDao).execute(psc); }
@@ -37,6 +39,8 @@ public class PscRepository {
     public void deleteAllNotesPsc() { new DeleteAllNotePscAsyncTask(pscDao).execute(); }
 
     public LiveData<List<Psc>> getAllNotesPsc() { return allNotesPsc; }
+
+    public LiveData<List<Psc>> getAllClientesAudits(String cliente) { return allClientesAudits; }
 
     private static class InsertNotePscAsyncTask extends AsyncTask<Psc, Void, Void> {
         private final PscDao pscDao;

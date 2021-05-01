@@ -14,16 +14,20 @@ import java.util.List;
 public class PscViewModel extends AndroidViewModel {
     private PscRepository repository;
     private LiveData<List<Psc>> allNotesPsc;
+    private LiveData<List<Psc>> allClientesAudits;
 
     public PscViewModel(@NonNull Application application) {
         super(application);
         repository = new PscRepository(application);
         allNotesPsc = repository.getAllNotesPsc();
+        allClientesAudits = repository.getAllClientesAudits();
     }
 
     public LiveData<List<Psc>> getAllNotes() {
         return allNotesPsc;
     }
+
+    public LiveData<List<Psc>> getAllClientesAudits(String cliente) { return allClientAudits; }
 
     public void insert(Psc psc) { repository.insert(psc); }
 

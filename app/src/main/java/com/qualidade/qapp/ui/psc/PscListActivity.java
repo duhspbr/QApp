@@ -53,11 +53,12 @@ public class PscListActivity extends AppCompatActivity {
             }
         });
 
+
         RecyclerView recyclerView = findViewById(R.id.rcv_psc_result);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        final NotePSCAdapter adapter = new NotePSCAdapter();
+        final NotePSCAdapter adapter = new NotePSCAdapter(getApplicationContext(), getApplication());
         recyclerView.setAdapter(adapter);
 
         adapter.setOnItemClickListener(new NotePSCAdapter.OnItemClickListener() {

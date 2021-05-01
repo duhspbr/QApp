@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2B2B29"
+    android:background="#FDFDFC"
     tools:context=".ui.cqm.CqmRecordActivity">
 
     <RelativeLayout
@@ -19,7 +19,7 @@
             android:layout_marginTop="15dp"
             android:text="Formulário de Controle\nCartões Personalizados"
             android:textSize="28sp"
-            android:textColor="#FFFFFF"
+            android:textColor="#3E3D3D"
             android:maxLines="2"
             android:textStyle="bold"/>
 
@@ -32,21 +32,20 @@
             android:layout_marginTop="25dp"
             android:text="Localização das Trilhas magnéticas"
             android:textSize="22dp"
-            android:textColor="#FFFFFF"
+            android:textColor="#3E3D3D"
             android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/editMaquina"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/lblLogin"
             android:layout_toRightOf="@id/txtViewTitulo0"
             android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="50dp"
-            android:textSize="24dp"
-            android:background="@drawable/border_edit_blue_text"
-            android:hint="    Maquina"/>
+            android:textSize="26dp"
+            android:hint="  Maquina"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView0"
@@ -56,8 +55,8 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             app:cardCornerRadius="15dp"
-            android:layout_marginTop="15dp"
-            app:cardBackgroundColor="#19D3CDCD">
+            android:elevation="10dp"
+            android:layout_marginTop="15dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -88,7 +87,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ROT - Rotina"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
 
                     <RadioButton
@@ -96,7 +95,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="PRE - Preventiva"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
 
                     <RadioButton
@@ -105,7 +104,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="COR - Corretiva"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
                 </RadioGroup>
 
@@ -135,7 +134,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="OK"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
 
                     <RadioButton
@@ -143,7 +142,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="NOK"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
 
                     <RadioButton
@@ -152,7 +151,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="N/A"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
                 </RadioGroup>
 
@@ -175,7 +174,6 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
                     android:layout_below="@+id/txtViewChamado0"
-                    android:background="@drawable/border_card"
                     android:layout_toRightOf="@+id/rdGroup02"
                     android:layout_marginLeft="30dp"/>
 
@@ -192,7 +190,7 @@
             android:layout_marginTop="25dp"
             android:text="Verificação de Características de \nCodificação Magnética"
             android:textSize="16sp"
-            android:textColor="#FFFFFF"
+            android:textColor="#3E3D3D"
             android:textStyle="bold"/>
 
         <androidx.cardview.widget.CardView
@@ -203,6 +201,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             app:cardCornerRadius="5dp"
+            android:elevation="10dp"
             android:layout_marginTop="15dp"
             app:cardBackgroundColor="#19D3CDCD">
 
@@ -235,7 +234,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ROT - Rotina"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
 
                     <RadioButton
@@ -243,7 +242,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="PRE - Preventiva"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
 
                     <RadioButton
@@ -252,7 +251,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="COR - Corretiva"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
                 </RadioGroup>
 
@@ -282,7 +281,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="OK"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
 
                     <RadioButton
@@ -290,7 +289,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="NOK"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
 
                     <RadioButton
@@ -299,7 +298,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="N/A"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
                 </RadioGroup>
 
@@ -338,7 +337,7 @@
             android:layout_marginTop="25dp"
             android:text="Teste de empenamento do cartão,\n após a personalização"
             android:textSize="16sp"
-            android:textColor="#FFFFFF"
+            android:textColor="#3E3D3D"
             android:textStyle="bold"/>
 
         <androidx.cardview.widget.CardView
@@ -381,7 +380,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ROT - Rotina"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
 
                     <RadioButton
@@ -389,7 +388,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="PRE - Preventiva"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
 
                     <RadioButton
@@ -398,7 +397,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="COR - Corretiva"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
                 </RadioGroup>
 
@@ -428,7 +427,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="OK"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
 
                     <RadioButton
@@ -436,7 +435,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="NOK"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
 
                     <RadioButton
@@ -445,7 +444,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="N/A"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold"/>
                 </RadioGroup>
 
@@ -484,7 +483,7 @@
             android:layout_marginTop="25dp"
             android:text="Stress Residual após aplicação do Embosser,\n Termográfia ou Infiller"
             android:textSize="16sp"
-            android:textColor="#FFFFFF"
+            android:textColor="#3E3D3D"
             android:textStyle="bold"/>
 
         <androidx.cardview.widget.CardView
@@ -527,7 +526,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ROT - Rotina"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
 
                     <RadioButton
@@ -535,7 +534,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="PRE - Preventiva"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
 
                     <RadioButton
@@ -544,7 +543,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="COR - Corretiva"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
                 </RadioGroup>
 
@@ -574,7 +573,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="OK"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
 
                     <RadioButton
@@ -582,7 +581,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="NOK"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
 
                     <RadioButton
@@ -591,7 +590,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="N/A"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
                 </RadioGroup>
 
@@ -651,7 +650,7 @@
             android:layout_marginTop="25dp"
             android:text="Aparência e intencidade do Infiler"
             android:textSize="16sp"
-            android:textColor="#FFFFFF"
+            android:textColor="#3E3D3D"
             android:textStyle="bold"/>
 
         <androidx.cardview.widget.CardView
@@ -694,7 +693,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ROT - Rotina"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
 
                     <RadioButton
@@ -702,7 +701,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="PRE - Preventiva"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
 
                     <RadioButton
@@ -711,7 +710,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="COR - Corretiva"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
                 </RadioGroup>
 
@@ -741,7 +740,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="OK"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
 
                     <RadioButton
@@ -749,7 +748,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="NOK"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
 
                     <RadioButton
@@ -758,7 +757,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="N/A"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
                 </RadioGroup>
 
@@ -818,7 +817,7 @@
             android:layout_marginTop="25dp"
             android:text="Teste de Altura do Embosser"
             android:textSize="16sp"
-            android:textColor="#FFFFFF"
+            android:textColor="#3E3D3D"
             android:textStyle="bold"/>
 
         <TextView
@@ -831,7 +830,7 @@
             android:layout_marginTop="25dp"
             android:text="Com ou sem Embosser?"
             android:textSize="16sp"
-            android:textColor="#FFFFFF"
+            android:textColor="#3E3D3D"
             android:textStyle="bold"/>
 
         <RadioGroup
@@ -898,7 +897,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ROT - Rotina"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
 
                     <RadioButton
@@ -906,7 +905,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="PRE - Preventiva"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
 
                     <RadioButton
@@ -915,7 +914,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="COR - Corretiva"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
                 </RadioGroup>
 
@@ -945,7 +944,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="OK"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
 
                     <RadioButton
@@ -953,7 +952,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="NOK"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
 
                     <RadioButton
@@ -962,7 +961,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:text="N/A"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#3E3D3D"
                         android:textStyle="bold" />
                 </RadioGroup>
 
@@ -1025,7 +1024,7 @@
                     android:layout_below="@+id/line1"
                     android:layout_marginLeft="15dp"
                     android:textSize="16sp"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#3E3D3D"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"/>
 
@@ -1072,7 +1071,7 @@
                     android:layout_below="@+id/editText_area1_p3"
                     android:layout_marginLeft="15dp"
                     android:textSize="16sp"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#3E3D3D"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"/>
 
@@ -1084,7 +1083,7 @@
                     android:layout_below="@+id/txtView_p2"
                     android:layout_marginLeft="15dp"
                     android:textSize="16sp"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#3E3D3D"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"/>
 
@@ -1132,7 +1131,7 @@
                     android:layout_below="@+id/txtView_p2"
                     android:layout_marginLeft="60dp"
                     android:textSize="16sp"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#3E3D3D"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"/>
 
@@ -1181,7 +1180,7 @@
                     android:text="S2\nPt1(mm)    Pt2(mm)    Pt3(mm)"
                     android:layout_marginLeft="15dp"
                     android:textSize="16sp"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#3E3D3D"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"/>
 
@@ -1231,7 +1230,7 @@
                     android:text="S1\nPt1(mm)    Pt2(mm)    Pt3(mm)"
                     android:layout_marginLeft="60dp"
                     android:textSize="16sp"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#3E3D3D"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"/>
 

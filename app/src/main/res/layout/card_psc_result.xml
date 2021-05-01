@@ -7,8 +7,8 @@
     android:layout_marginEnd="8dp"
     android:layout_marginStart="8dp"
     android:layout_marginTop="8dp"
-    app:cardCornerRadius="5dp"
-    android:elevation="8dp">
+    app:cardCornerRadius="15dp"
+    android:elevation="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -144,7 +144,7 @@
             android:layout_below="@+id/relative_view_not_expand2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <View
                 android:layout_width="match_parent"
@@ -202,9 +202,9 @@
                 android:id="@+id/textv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="460dp"
+                android:layout_marginStart="440dp"
                 android:layout_marginTop="15dp"
-                android:text="Qntde amostra"
+                android:text="QTDE AMOSTRA"
                 android:textSize="18sp"
                 android:textStyle="bold|italic" />
 
@@ -213,7 +213,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textv"
-                android:layout_marginStart="460dp"
+                android:layout_marginStart="440dp"
                 android:text="450"
                 android:textSize="24sp"
                 android:textStyle="bold|italic" />
@@ -222,9 +222,9 @@
                 android:id="@+id/textv8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="360dp"
+                android:layout_marginStart="320dp"
                 android:layout_marginTop="15dp"
-                android:text="Qntde lote"
+                android:text="QTDE LOTE"
                 android:textSize="18sp"
                 android:textStyle="bold|italic" />
 
@@ -233,7 +233,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textv8"
-                android:layout_marginStart="360dp"
+                android:layout_marginStart="320dp"
                 android:text="450"
                 android:textSize="24sp"
                 android:textStyle="bold|italic" />
@@ -297,8 +297,14 @@
                 android:layout_below="@+id/textv1"
                 android:layout_marginStart="20dp"/>
 
-        </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_psc_card_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/text_view_item"
+                tools:listitem="@layout/card_psc_result_card"/>
 
+        </RelativeLayout>
 
     </RelativeLayout>
 

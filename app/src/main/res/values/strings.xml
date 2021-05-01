@@ -5,6 +5,7 @@
     <string name="dod">DOD</string>
 
     <string-array name="clientes">
+        <item>CLIENTES</item>
         <item>ITAÚ</item>
         <item>SANTANDER</item>
         <item>BRADESCO</item>
@@ -14,6 +15,7 @@
     </string-array>
 
     <string-array name="cod">
+        <item>COD ERRO</item>
         <item>1 - CHIP</item>
         <item>9 - TARJA</item>
         <item>10 - CARTAO DANIF</item>
@@ -26,6 +28,7 @@
     </string-array>
 
     <string-array name="turno">
+        <item>TURNO</item>
         <item>DIURNO A</item>
         <item>DIURNO B</item>
         <item>NOTURNO A</item>
@@ -33,6 +36,7 @@
     </string-array>
 
     <string-array name="gaveta">
+        <item>GAVETA</item>
         <item>PACK ENTRADA</item>
         <item>PACK SAIDA</item>
         <item>GAV 1</item>
@@ -45,6 +49,7 @@
     </string-array>
 
     <string-array name="linha">
+        <item>LINHA</item>
         <item>MANUSEIO 1</item>
         <item>MANUSEIO 2</item>
         <item>MANUSEIO 3</item>

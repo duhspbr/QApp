@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#070707"
+    android:background="#FFFFFF"
     tools:context=".ui.psc.PscRecordActivity">
 
     <RelativeLayout
@@ -18,7 +18,7 @@
             android:layout_marginTop="25dp"
             android:layout_marginLeft="25sp"
             android:text="Registros \nAuditorias PSC"
-            android:textColor="#FFFFFF"
+            android:textColor="#434343"
             android:textSize="40sp"
             android:textStyle="bold"/>
 
@@ -28,132 +28,85 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
+            android:elevation="10dp"
             android:layout_marginRight="25dp"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="30dp"
-            app:cardBackgroundColor="#2DD3CDCD">
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="30dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textv1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="45dp"
-                    android:textColor="#2196F3"
-                    android:text="TURNO"
-                    android:textSize="20sp"
-                    android:textStyle="bold"/>
-
                 <Spinner
                     android:id="@+id/spinner_turno"
                     android:layout_width="160dp"
                     android:layout_height="40dp"
-                    android:layout_below="@+id/textv1"
-                    android:layout_marginStart="30dp"
-                    android:backgroundTint="#FBFBFB"
-                    android:textSize="24sp"
-                    android:textColor="#FFFFFF" />
-
-                <TextView
-                    android:id="@+id/textv2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/spinner_turno"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="15dp"
-                    android:textColor="#2196F3"
-                    android:text="LINHA"
-                    android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="40dp"
+                    android:backgroundTint="#5E5A5A"
+                    android:textSize="24sp" />
 
                 <Spinner
                     android:id="@+id/spinner_linha"
                     android:layout_width="160dp"
                     android:layout_height="40dp"
-                    android:layout_below="@+id/textv2"
-                    android:layout_marginStart="30dp"
-                    android:backgroundTint="#FFFFFF"
-                    android:textColor="#FFFFFF"/>
-
-                <TextView
-                    android:id="@+id/textv3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/textv1"
-                    android:layout_marginStart="220dp"
-                    android:layout_marginTop="45dp"
-                    android:textColor="#2196F3"
-                    android:text="CLIENTE"
-                    android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:layout_below="@+id/spinner_turno"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="40dp"
+                    android:backgroundTint="#5E5A5A"
+                    android:textSize="24sp"/>
 
                 <Spinner
                     android:id="@+id/spinner_clientes"
                     android:layout_width="160dp"
                     android:layout_height="40dp"
-                    android:layout_below="@+id/textv1"
-                    android:layout_toRightOf="@+id/textv1"
-                    android:layout_marginStart="220dp"
-                    android:backgroundTint="#FBFBFB"
-                    android:textSize="24sp"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF"/>
-
-                <EditText
-                    android:id="@+id/editTextProdutoAudit"
-                    android:layout_width="160dp"
-                    android:layout_height="45dp"
-                    android:layout_below="@+id/textv2"
-                    android:layout_toRightOf="@+id/textv1"
-                    android:layout_marginStart="220sp"
-                    android:hint="Produto auditado"
-                    android:textSize="22sp"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:layout_toRightOf="@id/spinner_turno"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="100dp"
+                    android:backgroundTint="#5E5A5A"
+                    android:textSize="24sp"/>
 
                 <EditText
                     android:id="@+id/editTextID"
                     android:layout_width="160dp"
                     android:layout_height="45dp"
-                    android:layout_below="@+id/editTextQtde"
+                    android:layout_below="@+id/spinner_clientes"
+                    android:layout_toRightOf="@+id/spinner_linha"
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="30dp"
-                    android:layout_marginStart="30dp"
-                    android:hint="ID da ordem"
+                    android:layout_marginStart="100dp"
+                    android:hint="ID ORDEM"
                     android:textSize="22sp"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#5E5A5A"
+                    android:textColorHint="#5E5A5A" />
 
                 <EditText
                     android:id="@+id/editTextQtdeLote"
                     android:layout_width="160dp"
                     android:layout_height="45dp"
                     android:layout_below="@+id/spinner_linha"
-                    android:layout_marginStart="220dp"
-                    android:layout_toRightOf="@+id/textv1"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_toRightOf="@+id/editTextQtde"
                     android:layout_marginTop="30dp"
-                    android:hint="Qntde do lote"
+                    android:hint="QTDE LOTE"
                     android:inputType="number"
                     android:textSize="22sp"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF"/>
+                    android:textColor="#5E5A5A"
+                    android:textColorHint="#5E5A5A"/>
 
                 <EditText
                     android:id="@+id/editTextQtde"
                     android:layout_width="160dp"
                     android:layout_height="45dp"
                     android:layout_below="@+id/spinner_linha"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="40dp"
                     android:layout_marginTop="30dp"
-                    android:hint="Qntde da amostra"
+                    android:hint="QTDE AMOSTRA"
                     android:inputType="number"
                     android:textSize="22sp"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColor="#5E5A5A"
+                    android:textColorHint="#5E5A5A" />
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
@@ -167,7 +120,7 @@
             android:layout_marginTop="40dp"
             android:layout_marginBottom="10dp"
             android:textSize="32sp"
-            android:textColor="#FFFFFF"
+            android:textColor="#5E5A5A"
             android:textStyle="bold"
             android:text="Pontos auditados"/>
 

@@ -30,6 +30,9 @@ public interface PscDao {
     @Query("SELECT * FROM notepsc_table WHERE date=:date")
     LiveData<List<Psc>> getAllPscNotes(String date);
 
+    @Query("SELECT * FROM notepsc_table WHERE cliente=:cliente")
+    LiveData<List<Psc>> getAllClienteAudits(String cliente);
+
     @Query("SELECT COUNT(*) FROM notepsc_table")
     LiveData<Integer> getCount_psc_status_total_mes();
     //criar função que pegue o ultimo dia do mês

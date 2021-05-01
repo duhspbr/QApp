@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#232323">
+    android:background="#FDFDFC">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -90,12 +90,11 @@
 
                 <EditText
                     android:id="@+id/editTextProdutoAudit"
-                    android:layout_width="160dp"
-                    android:layout_height="45dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/spinner_turno"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="60dp"
-                    android:background="@drawable/border"
-                    android:layout_marginStart="30sp"
                     android:hint="  Produto"
                     android:textSize="22sp"
                     android:textColor="#FFFFFF"

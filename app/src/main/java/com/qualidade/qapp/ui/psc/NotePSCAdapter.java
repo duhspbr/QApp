@@ -1,5 +1,7 @@
 package com.qualidade.qapp.ui.psc;
 
+import android.app.Application;
+import android.content.Context;
 import android.graphics.Color;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
@@ -10,6 +12,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.qualidade.qapp.R;
@@ -20,11 +25,18 @@ import java.util.List;
 
 public class NotePSCAdapter extends RecyclerView.Adapter<NotePSCAdapter.MViewHolder> {
     private List<Psc> psc = new ArrayList<>();
+    final Context mContext;
+    final Application mApplication;
 
     private NotePSCAdapter.OnItemClickListener mListener;
 
     public interface OnItemClickListener {
         void onCardClick(int position);
+    }
+
+    public NotePSCAdapter(Context context, Application application) {
+        mContext = context;
+        mApplication = application;
     }
 
     public void setOnItemClickListener (NotePSCAdapter.OnItemClickListener listener) { mListener = listener; }
@@ -91,7 +103,7 @@ public class NotePSCAdapter extends RecyclerView.Adapter<NotePSCAdapter.MViewHol
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final MViewHolder holder, int position) {
         Psc currentNote = psc.get(position);
         holder.textViewQuantidade.setText(currentNote.getQtde_amostra());
         holder.textViewProduto.setText(currentNote.getProd_audit());
@@ -109,6 +121,19 @@ public class NotePSCAdapter extends RecyclerView.Adapter<NotePSCAdapter.MViewHol
         else if (psc.get(position).getStatus().equals("NOK")) {
             holder.textViewStatus.setTextColor(Color.parseColor("#CC0000"));
         }
+
+
+        PscAdapterCard adapter = new PscAdapterCard();
+        PscViewModel viewModel = new PscViewModel(mApplication);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(mContext);
+
+        viewModel.getAllClientesAudits(holder.textViewCliente.getText().toString()).observe((LifecycleOwner) this, new Observer<List<Psc>>() {
+            @Override
+            public void onChanged(List<Psc> pscs) {
+
+            }
+        });
+        holder.rcv_psc_result.setAdapter(adapter);
     }
 
     @Override
